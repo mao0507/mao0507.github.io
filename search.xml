@@ -336,4 +336,28 @@
         <tag>Node</tag>
       </tags>
   </entry>
+  <entry>
+    <title>vue3重新渲染元件的方式</title>
+    <url>/2023/08/05/vue/vue3%E9%87%8D%E6%96%B0%E6%B8%B2%E6%9F%93%E5%85%83%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<blockquote>
+<p>Vue3 rerender a component</p>
+</blockquote>
+<ol>
+<li><p>v-if<br>透過v-if的判斷，將組件移除後，重新創立，掛載。</p>
+</li>
+<li><p>鍵值改變驅動Key-Changing<br>只需要在component上，綁定key值，就可以透過key值的改動，觸發component的更新</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:key</span>=<span class="string">&quot;componentKey&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> componentKey = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Rerender</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  componentKey.<span class="property">value</span> += <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>]]></content>
+      <categories>
+        <category>vue</category>
+        <category>vue3</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
 </search>
