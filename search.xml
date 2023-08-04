@@ -353,11 +353,11 @@
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> componentKey = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Rerender</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  componentKey.<span class="property">value</span> += <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>]]></content>
       <categories>
         <category>vue</category>
-        <category>vue3</category>
-        <category>JavaScript</category>
       </categories>
       <tags>
+        <tag>JavaScript</tag>
         <tag>vue</tag>
+        <tag>vue3</tag>
       </tags>
   </entry>
 </search>
