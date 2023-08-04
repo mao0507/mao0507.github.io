@@ -25,6 +25,66 @@
       </tags>
   </entry>
   <entry>
+    <title>DBeaver連接時報錯：Public Key Retrieval is not allowed Public Key Retrieval is not allowed</title>
+    <url>/2023/07/25/db/DBeaver%E9%80%A3%E6%8E%A5%E6%99%82%E5%A0%B1%E9%8C%AF/</url>
+    <content><![CDATA[<h3 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h3><ol>
+<li>找對對應無法連線資料庫</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/cgwisna.jpg"
+                     
+                ></p>
+<ol start="2">
+<li>對其點擊右鍵 或是按下 F4</li>
+</ol>
+<ul>
+<li><p>如果使用右鍵點擊，需再選擇 <code>Edit Connecttion</code><br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/AL9gCL4.jpg"
+                     
+                ></p>
+</li>
+<li><p>點開會出現此視窗，(F4也會出現此視窗)<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/mCgag08.jpg"
+                     
+                ></p>
+</li>
+</ul>
+<ol start="3">
+<li>切換至 Driver properties</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/XbZ1S0z.jpg"
+                     
+                ></p>
+<ol start="4">
+<li><p>將 <code>allowRublicKeyRetrueval</code> 屬性切換為 True<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Voe7OW2.jpg"
+                     
+                ></p>
+</li>
+<li><p>按下OK，重新測試連線</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>db</category>
+      </categories>
+      <tags>
+        <tag>db</tag>
+        <tag>dbeaver</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>eslint 安裝教學</title>
     <url>/2023/06/06/eslint/eslint%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A/</url>
     <content><![CDATA[<h1 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h1><h2 id="安裝-eslint"><a href="#安裝-eslint" class="headerlink" title="安裝 eslint"></a>安裝 eslint</h2><p>安裝方式</p>
@@ -120,66 +180,6 @@
       </categories>
       <tags>
         <tag>eslint</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DBeaver連接時報錯：Public Key Retrieval is not allowed Public Key Retrieval is not allowed</title>
-    <url>/2023/07/25/db/DBeaver%E9%80%A3%E6%8E%A5%E6%99%82%E5%A0%B1%E9%8C%AF/</url>
-    <content><![CDATA[<h3 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h3><ol>
-<li>找對對應無法連線資料庫</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/cgwisna.jpg"
-                     
-                ></p>
-<ol start="2">
-<li>對其點擊右鍵 或是按下 F4</li>
-</ol>
-<ul>
-<li><p>如果使用右鍵點擊，需再選擇 <code>Edit Connecttion</code><br>  <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/AL9gCL4.jpg"
-                     
-                ></p>
-</li>
-<li><p>點開會出現此視窗，(F4也會出現此視窗)<br>  <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/mCgag08.jpg"
-                     
-                ></p>
-</li>
-</ul>
-<ol start="3">
-<li>切換至 Driver properties</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/XbZ1S0z.jpg"
-                     
-                ></p>
-<ol start="4">
-<li><p>將 <code>allowRublicKeyRetrueval</code> 屬性切換為 True<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Voe7OW2.jpg"
-                     
-                ></p>
-</li>
-<li><p>按下OK，重新測試連線</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>db</category>
-      </categories>
-      <tags>
-        <tag>db</tag>
-        <tag>dbeaver</tag>
       </tags>
   </entry>
   <entry>
