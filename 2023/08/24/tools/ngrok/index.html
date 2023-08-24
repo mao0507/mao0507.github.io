@@ -13,18 +13,38 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://mao0507.github.io/archives/"/>
+    <link rel="canonical" href="https://mao0507.github.io/2023/08/24/tools/ngrok/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://mao0507.github.io/archives/index.html">
+        <meta name="description" content="前言當在開發網頁的時候，常常要線上測試畫面是否正常，或是提供線上畫面來DEMO檢驗。 這時候就可能需要自己來架設一個服務，看是要讓其他人連線至開發的主機上，或者是部屬到網路空間上，如果還沒有要正式上線的話，就要提早負擔主機費用，甚至還需要花時間特別去設定，對於有期限的專案來說，太浪費時間了。 於是我們可以使用 ngrok 這個第三方軟體，來快速的幫我們建立一個臨時的對外伺服器。 教學 先進入到 n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ngork 介紹">
+<meta property="og:url" content="https://mao0507.github.io/2023/08/24/tools/ngrok/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言當在開發網頁的時候，常常要線上測試畫面是否正常，或是提供線上畫面來DEMO檢驗。 這時候就可能需要自己來架設一個服務，看是要讓其他人連線至開發的主機上，或者是部屬到網路空間上，如果還沒有要正式上線的話，就要提早負擔主機費用，甚至還需要花時間特別去設定，對於有期限的專案來說，太浪費時間了。 於是我們可以使用 ngrok 這個第三方軟體，來快速的幫我們建立一個臨時的對外伺服器。 教學 先進入到 n">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/Rh85PE9.png">
+<meta property="og:image" content="https://i.imgur.com/DZukL03.png">
+<meta property="og:image" content="https://i.imgur.com/XcbgJoF.png">
+<meta property="og:image" content="https://i.imgur.com/d2r1zdj.png">
+<meta property="og:image" content="https://i.imgur.com/mfIXVCO.png">
+<meta property="og:image" content="https://i.imgur.com/cSBEJvS.png">
+<meta property="og:image" content="https://i.imgur.com/O6CoKNr.png">
+<meta property="og:image" content="https://i.imgur.com/0LQUQBB.png">
+<meta property="og:image" content="https://i.imgur.com/8N4s0C0.png">
+<meta property="og:image" content="https://i.imgur.com/6PeIlY6.png">
+<meta property="og:image" content="https://i.imgur.com/J9IWkni.png">
+<meta property="og:image" content="https://i.imgur.com/8xUDSqu.png">
+<meta property="og:image" content="https://i.imgur.com/EgsYAKA.png">
+<meta property="og:image" content="https://i.imgur.com/WDHMVKv.png">
+<meta property="article:published_time" content="2023-08-24T14:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-24T15:10:27.883Z">
 <meta property="article:author" content="mao">
+<meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/Rh85PE9.png">
     
     
     <!--- Icon Part-->
@@ -36,7 +56,7 @@
     
     <title>
         
-            歸檔 -
+            Ngork 介紹 -
         
         Mao&#39;s Blog
     </title>
@@ -140,7 +160,7 @@
                         
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/archives"  >
                                     
                                         
@@ -255,7 +275,7 @@
             
                 
                     <li class="drawer-navbar-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/archives"  >
                              
                                 
@@ -342,72 +362,342 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">Ngork 介紹</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar/space-cat.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Mao</span>
+                            
+                                <span class="author-label"></span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-08-24 22:00</span>
+        <span class="mobile">2023-08-24 22</span>
+        <span class="hover-info">撰寫</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[8]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='08-24'>
-                <a href="/2023/08/24/tools/ngrok/">
-                  <span class="article-title">Ngork 介紹</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='08-05'>
-                <a href="/2023/08/05/vscode/vscode%E8%A8%AD%E5%AE%9AMarkdown%E8%A7%B8%E7%99%BC%E4%BD%BF%E7%94%A8%E8%80%85%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5/">
-                  <span class="article-title">vscode設定Markdown觸發使用者程式碼片段</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='08-05'>
-                <a href="/2023/08/05/vue/vue3%E9%87%8D%E6%96%B0%E6%B8%B2%E6%9F%93%E5%85%83%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F/">
-                  <span class="article-title">vue3重新渲染元件的方式</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='07-25'>
-                <a href="/2023/07/25/db/DBeaver%E9%80%A3%E6%8E%A5%E6%99%82%E5%A0%B1%E9%8C%AF/">
-                  <span class="article-title">DBeaver連接時報錯：Public Key Retrieval is not allowed Public Key Retrieval is not allowed</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='06-06'>
-                <a href="/2023/06/06/eslint/eslint%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A/">
-                  <span class="article-title">eslint 安裝教學</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='06-05'>
-                <a href="/2023/06/05/node/nvm%E7%94%A8%E6%B3%95/">
-                  <span class="article-title">安裝NVM教學</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-31'>
-                <a href="/2023/05/31/js/console%E7%94%A8%E6%B3%95/">
-                  <span class="article-title">console用法</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-29'>
-                <a href="/2023/05/29/hello-world/">
-                  <span class="article-title">Hello World</span>
-                </a>
-              </li>
-              
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-08-24 23:10:27</span>
+            <span class="mobile">2023-08-24 23:10</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/tools/">tools</a>&nbsp;
+                    </li>
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/tools/">tools</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>當在開發網頁的時候，常常要線上測試畫面是否正常，或是提供線上畫面來DEMO檢驗。</p>
+<p>這時候就可能需要自己來架設一個服務，看是要讓其他人連線至開發的主機上，或者是部屬到網<br>路空間上，如果還沒有要正式上線的話，就要提早負擔主機費用，甚至還需要花時間特別去設定，對於有期限的專案來說，太浪費時間了。</p>
+<p>於是我們可以使用 <code>ngrok</code> 這個第三方軟體，來快速的幫我們建立一個臨時的對外伺服器。</p>
+<h2 id="教學"><a href="#教學" class="headerlink" title="教學"></a>教學</h2><p> 先進入到 <a class="link"   target="_blank" rel="noopener" href="https://ngrok.com/" >ngrok官網 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Rh85PE9.png"
+                     
+                ></p>
+<p> 點擊右上方的 登入&#x2F;註冊</p>
+<p> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/DZukL03.png"
+                     
+                ></p>
+<p> 有帳號可以直接登入，或是直接使用 google &#x2F; github 來連接帳號啟用 </p>
+<p> 登入後，會進到ngrok的後台</p>
+<p> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/XcbgJoF.png"
+                     
+                ></p>
+<p> 依照作業環境，下載對應的檔案</p>
+<ul>
+<li>這邊以windows 作業環境為主</li>
+</ul>
+<p> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/d2r1zdj.png"
+                     
+                ></p>
+<p> 將檔案解壓縮，並放到 <code>C:\Program Files\ngrok</code> 底下</p>
+<p> 然後 打開 進階設定  </p>
+<ul>
+<li>打開路徑 <code>設定/系統/關於/進階系統設定</code></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/mfIXVCO.png"
+                     
+                ></p>
+<p>點選 進階&#x2F; 環境變數</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/cSBEJvS.png"
+                     
+                ></p>
+<p>選擇 Path  並點選編輯</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/O6CoKNr.png"
+                     
+                ></p>
+<p>點選右側新增，並加入 <code>C:\Program Files\ngrok</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/0LQUQBB.png"
+                     
+                ></p>
+<p>打開終端機，並輸入 <code>ngrok</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/8N4s0C0.png"
+                     
+                ></p>
+<p>有出現內容，表示已經安裝成功</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/6PeIlY6.png"
+                     
+                ></p>
+<p>回到 ngrok 後台頁面，並照著第二步操作 連接帳號</p>
+<p>複製下方指令 並輸入終端機 </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/J9IWkni.png"
+                     
+                ></p>
+<p>有出現這段文字，表示已經連線成功了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/8xUDSqu.png"
+                     
+                ></p>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>1.在本地開啟服務，假設服務位置為 <code>http://localhost:5173</code></p>
+<p>2.打開終端機 並輸入 <code>ngrok http 5173</code> </p>
+<p>出現此畫面表示已經成功開啟 ngrok 並且已經正在運行</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/EgsYAKA.png"
+                     
+                ></p>
+<p>接著將 <code>Forwarding</code> 這段的網址 貼到瀏覽器上</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/WDHMVKv.png"
+                     
+                ></p>
+<p>按下 <code>Vite Site</code> 按鈕</p>
+<p>就可以進入到 本機環境的網頁了 ，對外就可以直接連線</p>
+<p>每一次重新啟動 ngrok，都會產生一個新的 Forwarding，</p>
+<p>除非你有付費的 ngrok 帳號，否則你每次都要重新啟動 ngrok，才能取得新的</p>
+<p>如果要停止 ngrok ， 只要按下 <code>Ctrl + C</code></p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>標題:</strong> Ngork 介紹</li>
+        <li><strong>作者:</strong> Mao</li>
+        <li><strong>撰寫于:</strong> 2023-08-24 22:00:00</li>
+        
+            <li>
+                <strong>更新于:</strong> 2023-08-24 23:10:27
+            </li>
+        
+        <li>
+            <strong>連結:</strong> https://mao0507.github.io/2023/08/24/tools/ngrok/
+        </li>
+        <li>
+            <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 進行許可。
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/tools/">#tools</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/08/05/vscode/vscode%E8%A8%AD%E5%AE%9AMarkdown%E8%A7%B8%E7%99%BC%E4%BD%BF%E7%94%A8%E8%80%85%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">vscode設定Markdown觸發使用者程式碼片段</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;留言
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '009d751155fcdf127bd2',
+                    clientSecret: '0b2720bb1dabca0a8e5b7b475ec28eaa0b9e5a4a',
+                    repo: 'hexo-comment',
+                    owner: 'mao0507',
+                    admin: ['mao0507'],
+                    id: __gitalk__pathname,
+                    language: 'zh-TW'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此頁目錄</div>
+        <div class="page-title">Ngork 介紹</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E5%AD%B8"><span class="nav-text">教學</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">使用方式</span></a></li></ol>
+
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -469,6 +759,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -603,6 +914,16 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
     
 </div>
 
