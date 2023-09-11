@@ -85,6 +85,104 @@
       </tags>
   </entry>
   <entry>
+    <title>eslint 安裝教學</title>
+    <url>/2023/06/06/eslint/eslint%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A/</url>
+    <content><![CDATA[<h1 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h1><h2 id="安裝-eslint"><a href="#安裝-eslint" class="headerlink" title="安裝 eslint"></a>安裝 eslint</h2><p>安裝方式</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">npm install eslint </span><br><span class="line"></span><br><span class="line">yarn add eslint</span><br></pre></td></tr></table></figure></div>
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g</span><br></pre></td></tr></table></figure></div>
+
+<p>這裡需要注意， 是否要將eslint 安裝在global上，<br>如果安裝在global上的話，初始化就可以直接下<code>eslint --init</code> 來進行初始化，<br>如果沒有安裝在global上的話，則需要到<code>package.json</code>另外設定<code>script</code></p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><ul>
+<li>eslint 安裝在 global 上</li>
+</ul>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">eslint --init</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>安裝在專案裡<br>設定 <code>package.json</code> 中的 <code>script</code><div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;eslint&quot;</span><span class="punctuation">:</span><span class="string">&quot;eslint --init&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<p>執行 eslint 初始化</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn eslint </span><br><span class="line"></span><br><span class="line">npm run eslint</span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="初始化選項"><a href="#初始化選項" class="headerlink" title="初始化選項"></a>初始化選項</h2><ol>
+<li><p>How would you like to use ESLint ? <code>你想使用 ESLint 來做什麼？</code></p>
+<ul>
+<li>To check syntax only (檢查語法)</li>
+<li>To check syntax and find problems (檢查語法、找出問題)</li>
+<li>To check syntax, find problems, and enforce code style (檢查語法、找出問題和強制執行編碼風格)</li>
+</ul>
+</li>
+<li><p>What type of modules does your project use ?  <code>此專案是用什麼方式導入模組？</code></p>
+<ul>
+<li>JavaScript modules (import&#x2F;export) (使用 import&#x2F;export)</li>
+<li>CommonJs (require&#x2F;exports) (使用 require&#x2F;exports)</li>
+<li>None of these (不使用這些)</li>
+</ul>
+</li>
+<li><p>which framework does your project use ?  <code>要在此專案用哪個框架 ? </code></p>
+<ul>
+<li>React </li>
+<li>Vue.js</li>
+<li>None of these</li>
+</ul>
+</li>
+<li><p>Does your project use TypeScript ? <code>要使用 TypeScript 嗎 ? </code></p>
+<ul>
+<li>No</li>
+<li>Yes</li>
+</ul>
+</li>
+<li><p>Where does your code run ? <code>要在哪個環境下使用 ?</code></p>
+<ul>
+<li>Browser (瀏覽器)</li>
+<li>Node (Node)</li>
+</ul>
+</li>
+<li><p>How would you like to define a style for your project ? <code>要使用何種編碼風格?</code></p>
+<ul>
+<li>Use a popular style guide (依照目前流行編碼規則)</li>
+<li>Anser questions about your style (回答問題來了解你的風格)</li>
+</ul>
+</li>
+<li><p>Which style guide do you want to follow ?  <code>你想要選擇哪個風格?</code></p>
+<ul>
+<li>Airbnb</li>
+<li>Standard</li>
+<li>Google</li>
+<li>Xo</li>
+</ul>
+</li>
+<li><p>What format do you want your config file to be in ? <code>產出的config檔案要用何種格式</code></p>
+<ul>
+<li>JavaScript</li>
+<li>YAML</li>
+<li>JSON</li>
+</ul>
+</li>
+</ol>
+<p>回答完後，ESLint會依照回答的項目，檢查所需要的套件，詢問是否要直接幫你安裝<br>這個階段直接選擇 <code>Yes</code>  自動下載就好</p>
+<ul>
+<li>Which package manager do you want to use ? <code>選擇要使用的套件管理器</code><ul>
+<li>npm </li>
+<li>yarn </li>
+<li>pnpm</li>
+</ul>
+</li>
+</ul>
+<p>完成後 專案會多一個 <code> .eslintrc.js</code></p>
+<h3 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h3><p><a class="link"   href="https://ithelp.ithome.com.tw/articles/10215259" >Day02 | 整齊的程式，讓看的人長命百歲，給我用 ESLint <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+      <categories>
+        <category>eslint</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>eslint</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>console用法</title>
     <url>/2023/05/31/js/console%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<h2 id="關於Console"><a href="#關於Console" class="headerlink" title="關於Console"></a>關於Console</h2><p>在寫 JavaSrcipt的時候，要檢查運作流程或是檢查變數的狀態的時候，都會用到<code>console.log</code>來檢視程式或是參數的值，<br>但是<code>console</code>還有很多不同的用法</p>
@@ -430,104 +528,6 @@
       </categories>
       <tags>
         <tag>vscode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>eslint 安裝教學</title>
-    <url>/2023/06/06/eslint/eslint%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A/</url>
-    <content><![CDATA[<h1 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h1><h2 id="安裝-eslint"><a href="#安裝-eslint" class="headerlink" title="安裝 eslint"></a>安裝 eslint</h2><p>安裝方式</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">npm install eslint </span><br><span class="line"></span><br><span class="line">yarn add eslint</span><br></pre></td></tr></table></figure></div>
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g</span><br></pre></td></tr></table></figure></div>
-
-<p>這裡需要注意， 是否要將eslint 安裝在global上，<br>如果安裝在global上的話，初始化就可以直接下<code>eslint --init</code> 來進行初始化，<br>如果沒有安裝在global上的話，則需要到<code>package.json</code>另外設定<code>script</code></p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><ul>
-<li>eslint 安裝在 global 上</li>
-</ul>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">eslint --init</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li>安裝在專案裡<br>設定 <code>package.json</code> 中的 <code>script</code><div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;eslint&quot;</span><span class="punctuation">:</span><span class="string">&quot;eslint --init&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<p>執行 eslint 初始化</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn eslint </span><br><span class="line"></span><br><span class="line">npm run eslint</span><br></pre></td></tr></table></figure></div>
-
-
-<h2 id="初始化選項"><a href="#初始化選項" class="headerlink" title="初始化選項"></a>初始化選項</h2><ol>
-<li><p>How would you like to use ESLint ? <code>你想使用 ESLint 來做什麼？</code></p>
-<ul>
-<li>To check syntax only (檢查語法)</li>
-<li>To check syntax and find problems (檢查語法、找出問題)</li>
-<li>To check syntax, find problems, and enforce code style (檢查語法、找出問題和強制執行編碼風格)</li>
-</ul>
-</li>
-<li><p>What type of modules does your project use ?  <code>此專案是用什麼方式導入模組？</code></p>
-<ul>
-<li>JavaScript modules (import&#x2F;export) (使用 import&#x2F;export)</li>
-<li>CommonJs (require&#x2F;exports) (使用 require&#x2F;exports)</li>
-<li>None of these (不使用這些)</li>
-</ul>
-</li>
-<li><p>which framework does your project use ?  <code>要在此專案用哪個框架 ? </code></p>
-<ul>
-<li>React </li>
-<li>Vue.js</li>
-<li>None of these</li>
-</ul>
-</li>
-<li><p>Does your project use TypeScript ? <code>要使用 TypeScript 嗎 ? </code></p>
-<ul>
-<li>No</li>
-<li>Yes</li>
-</ul>
-</li>
-<li><p>Where does your code run ? <code>要在哪個環境下使用 ?</code></p>
-<ul>
-<li>Browser (瀏覽器)</li>
-<li>Node (Node)</li>
-</ul>
-</li>
-<li><p>How would you like to define a style for your project ? <code>要使用何種編碼風格?</code></p>
-<ul>
-<li>Use a popular style guide (依照目前流行編碼規則)</li>
-<li>Anser questions about your style (回答問題來了解你的風格)</li>
-</ul>
-</li>
-<li><p>Which style guide do you want to follow ?  <code>你想要選擇哪個風格?</code></p>
-<ul>
-<li>Airbnb</li>
-<li>Standard</li>
-<li>Google</li>
-<li>Xo</li>
-</ul>
-</li>
-<li><p>What format do you want your config file to be in ? <code>產出的config檔案要用何種格式</code></p>
-<ul>
-<li>JavaScript</li>
-<li>YAML</li>
-<li>JSON</li>
-</ul>
-</li>
-</ol>
-<p>回答完後，ESLint會依照回答的項目，檢查所需要的套件，詢問是否要直接幫你安裝<br>這個階段直接選擇 <code>Yes</code>  自動下載就好</p>
-<ul>
-<li>Which package manager do you want to use ? <code>選擇要使用的套件管理器</code><ul>
-<li>npm </li>
-<li>yarn </li>
-<li>pnpm</li>
-</ul>
-</li>
-</ul>
-<p>完成後 專案會多一個 <code> .eslintrc.js</code></p>
-<h3 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h3><p><a class="link"   href="https://ithelp.ithome.com.tw/articles/10215259" >Day02 | 整齊的程式，讓看的人長命百歲，給我用 ESLint <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>eslint</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>eslint</tag>
       </tags>
   </entry>
   <entry>
