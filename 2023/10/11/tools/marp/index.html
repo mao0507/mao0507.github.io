@@ -13,38 +13,31 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://mao0507.github.io/2023/08/24/tools/ngrok/"/>
+    <link rel="canonical" href="https://mao0507.github.io/2023/10/11/tools/marp/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="前言當在開發網頁的時候，常常要線上測試畫面是否正常，或是提供線上畫面來DEMO檢驗。 這時候就可能需要自己來架設一個服務，看是要讓其他人連線至開發的主機上，或者是部屬到網路空間上，如果還沒有要正式上線的話，就要提早負擔主機費用，甚至還需要花時間特別去設定，對於有期限的專案來說，太浪費時間了。 於是我們可以使用 ngrok 這個第三方軟體，來快速的幫我們建立一個臨時的對外伺服器。 教學 先進入到 n">
+        <meta name="description" content="前言常常要開會議報告，需要講稿的時候，都還要特別去做PPT或是PDF，對於一個工程師來說，這是一種折磨 可以用順手的工具去做投影片就可以輕鬆很多，也可以省去很多精力 於是就找到了 Marp 這個功能套件 介紹Marp 是一個基於 Markdown 語法的投影片製作工具。 可以使用 Markdown 語法 快速建立 報告用的投影片 什麼是Markdown Markdown是一種輕量級標記式語言，它允">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ngrok 介紹">
-<meta property="og:url" content="https://mao0507.github.io/2023/08/24/tools/ngrok/index.html">
+<meta property="og:title" content="Markdown Marp VSCode 套件使用教學">
+<meta property="og:url" content="https://mao0507.github.io/2023/10/11/tools/marp/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言當在開發網頁的時候，常常要線上測試畫面是否正常，或是提供線上畫面來DEMO檢驗。 這時候就可能需要自己來架設一個服務，看是要讓其他人連線至開發的主機上，或者是部屬到網路空間上，如果還沒有要正式上線的話，就要提早負擔主機費用，甚至還需要花時間特別去設定，對於有期限的專案來說，太浪費時間了。 於是我們可以使用 ngrok 這個第三方軟體，來快速的幫我們建立一個臨時的對外伺服器。 教學 先進入到 n">
+<meta property="og:description" content="前言常常要開會議報告，需要講稿的時候，都還要特別去做PPT或是PDF，對於一個工程師來說，這是一種折磨 可以用順手的工具去做投影片就可以輕鬆很多，也可以省去很多精力 於是就找到了 Marp 這個功能套件 介紹Marp 是一個基於 Markdown 語法的投影片製作工具。 可以使用 Markdown 語法 快速建立 報告用的投影片 什麼是Markdown Markdown是一種輕量級標記式語言，它允">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/Rh85PE9.png">
-<meta property="og:image" content="https://i.imgur.com/DZukL03.png">
-<meta property="og:image" content="https://i.imgur.com/XcbgJoF.png">
-<meta property="og:image" content="https://i.imgur.com/d2r1zdj.png">
-<meta property="og:image" content="https://i.imgur.com/mfIXVCO.png">
-<meta property="og:image" content="https://i.imgur.com/cSBEJvS.png">
-<meta property="og:image" content="https://i.imgur.com/O6CoKNr.png">
-<meta property="og:image" content="https://i.imgur.com/0LQUQBB.png">
-<meta property="og:image" content="https://i.imgur.com/8N4s0C0.png">
-<meta property="og:image" content="https://i.imgur.com/6PeIlY6.png">
-<meta property="og:image" content="https://i.imgur.com/J9IWkni.png">
-<meta property="og:image" content="https://i.imgur.com/8xUDSqu.png">
-<meta property="og:image" content="https://i.imgur.com/EgsYAKA.png">
-<meta property="og:image" content="https://i.imgur.com/WDHMVKv.png">
-<meta property="article:published_time" content="2023-08-24T14:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-06T14:58:43.609Z">
+<meta property="og:image" content="https://i.imgur.com/gyYEoAn.jpg">
+<meta property="og:image" content="https://i.imgur.com/jJXSHNV.png">
+<meta property="og:image" content="https://i.imgur.com/uJ73gpD.png">
+<meta property="og:image" content="https://i.imgur.com/MDRqycI.png">
+<meta property="og:image" content="https://i.imgur.com/i7W0FJ7.png">
+<meta property="og:image" content="https://i.imgur.com/gcu5NZb.png">
+<meta property="og:image" content="https://i.imgur.com/bssChVz.png">
+<meta property="article:published_time" content="2023-10-11T07:50:00.000Z">
+<meta property="article:modified_time" content="2023-10-11T16:51:48.965Z">
 <meta property="article:author" content="mao">
 <meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/Rh85PE9.png">
+<meta name="twitter:image" content="https://i.imgur.com/gyYEoAn.jpg">
     
     
         <!-- Google tag (gtag.js) -->
@@ -66,7 +59,7 @@
     
     <title>
         
-            Ngrok 介紹 -
+            Markdown Marp VSCode 套件使用教學 -
         
         Mao&#39;s Blog
     </title>
@@ -389,7 +382,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">Ngrok 介紹</h1>
+                    <h1 class="article-title-regular">Markdown Marp VSCode 套件使用教學</h1>
                 </div>
             
                 
@@ -411,15 +404,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-08-24 22:00</span>
-        <span class="mobile">2023-08-24 22</span>
+        <span class="desktop">2023-10-11 15:50</span>
+        <span class="mobile">2023-10-11 15:50</span>
         <span class="hover-info">撰寫</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-09-06 22:58:43</span>
-            <span class="mobile">2023-09-06 22:58</span>
+            <span class="desktop">2023-10-12 00:51:48</span>
+            <span class="mobile">2023-10-12 00:51</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -465,123 +458,113 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>當在開發網頁的時候，常常要線上測試畫面是否正常，或是提供線上畫面來DEMO檢驗。</p>
-<p>這時候就可能需要自己來架設一個服務，看是要讓其他人連線至開發的主機上，或者是部屬到網<br>路空間上，如果還沒有要正式上線的話，就要提早負擔主機費用，甚至還需要花時間特別去設定，對於有期限的專案來說，太浪費時間了。</p>
-<p>於是我們可以使用 <code>ngrok</code> 這個第三方軟體，來快速的幫我們建立一個臨時的對外伺服器。</p>
-<h2 id="教學"><a href="#教學" class="headerlink" title="教學"></a>教學</h2><p> 先進入到 <a class="link"   target="_blank" rel="noopener" href="https://ngrok.com/" >ngrok官網 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p> <img  
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>常常要開會議報告，需要講稿的時候，都還要特別去做PPT或是PDF，對於一個工程師來說，這是一種折磨</p>
+<p>可以用順手的工具去做投影片就可以輕鬆很多，也可以省去很多精力</p>
+<p>於是就找到了 <code>Marp</code> 這個功能套件</p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><code>Marp</code> 是一個基於 Markdown 語法的投影片製作工具。</p>
+<p>可以使用 Markdown 語法 快速建立 報告用的投影片</p>
+<h2 id="什麼是Markdown"><a href="#什麼是Markdown" class="headerlink" title="什麼是Markdown"></a>什麼是Markdown</h2><blockquote>
+<p>Markdown是一種輕量級標記式語言，它允許人們使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。</p>
+</blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/Markdown" >來源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>有 VsCode 專用套件和 獨立的 CLI 可以做選擇</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Rh85PE9.png"
+                     data-src="https://i.imgur.com/gyYEoAn.jpg"
                      
                 ></p>
-<p> 點擊右上方的 登入&#x2F;註冊</p>
-<p> <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/DZukL03.png"
-                     
-                ></p>
-<p> 有帳號可以直接登入，或是直接使用 google &#x2F; github 來連接帳號啟用 </p>
-<p> 登入後，會進到ngrok的後台</p>
-<p> <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/XcbgJoF.png"
-                     
-                ></p>
-<p> 依照作業環境，下載對應的檔案</p>
+<p><code>本次以 VsCode 套件為主</code></p>
+<p>安裝 Marp 非常簡單<br>只要在 VsCode 中安裝<a class="link"   target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >Marp for VS Code <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的 Plugin 即可。</p>
+<h1 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h1><p>要在 VsCode 使用 Marp ，<br>首先我們要在文件最上方加入以下內容：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">--- </span><br><span class="line">marp: true </span><br><span class="line">theme: gaia</span><br><span class="line">paginate: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+
+<p>告訴Vscode 我們開始使用 marp的套件了</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">marp : <span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
+
+<p>theme 是指簡報主題的意思，<br>Marp 預設提供了 3 種簡報主題：<br><br></p>
 <ul>
-<li>這邊以windows 作業環境為主</li>
+<li>Default 預設主題</li>
+<li>uncover 主題具有三個設計理念：簡約、簡約、現代</li>
+<li>Gaia 主題基於<a class="link"   target="_blank" rel="noopener" href="https://github.com/yhatt/marp" >yhatt&#x2F;marp <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的經典設計</li>
 </ul>
-<p> <img  
+<br>
+
+<p>每種主題在背景顏色，<br>Markdown文字的擺放位置都會有差異</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/marp-team/marp-core/tree/main/themes?source=post_page-----eab8a0668733--------------------------------#readme" >參考說明 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>paginate 為 顯示頁數的選項</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paginate:<span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="基本語法"><a href="#基本語法" class="headerlink" title="基本語法"></a>基本語法</h2><h3 id="1-分頁"><a href="#1-分頁" class="headerlink" title="1. 分頁"></a>1. 分頁</h3><p>可使用 <code>---</code> 標記來分隔不同頁面的 Slide</p>
+<div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Page 1</span></span><br><span class="line">Hello World!</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Page 2</span></span><br><span class="line">Hello World 2!</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-設定圖片寬度"><a href="#2-設定圖片寬度" class="headerlink" title="2. 設定圖片寬度"></a>2. 設定圖片寬度</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">width:200px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片寬度為 200px --&gt;</span><br><span class="line">![<span class="string">height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片高度為 300px --&gt;</span><br><span class="line">![<span class="string">width:200px height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 同時設定兩者屬性 --&gt;</span><br><span class="line">![<span class="string">w:32 h:32</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 32x32 px --&gt;</span><br><span class="line">![<span class="string">width:90% height:80%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 90% 寬度 x 80% 高度  --&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-設定圖片特效"><a href="#3-設定圖片特效" class="headerlink" title="3. 設定圖片特效"></a>3. 設定圖片特效</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">blur</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片 模糊化  --&gt;</span><br><span class="line">![<span class="string">blur:10px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片模糊化，參數為 10px(越大越模糊)  --&gt;</span><br><span class="line">![<span class="string">grayscale:1</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片灰階化  --&gt;</span><br><span class="line">![<span class="string">brightness:.8 sepia:50%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 多重特效設定 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 4. 設定背景圖片</span></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">![bg](bg.jpg) &lt;!-- 設定 bg.jpg 為背景圖片--&gt;</span></span><br><span class="line"><span class="code">![bg fit](bg.jpg) &lt;!-- 設定 bg.jgp 的圖片大小調整為背景框架大小 --&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="4-1-控制背景圖位置"><a href="#4-1-控制背景圖位置" class="headerlink" title="4.1 控制背景圖位置"></a>4.1 控制背景圖位置</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">bg left</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側畫面 --&gt;</span><br><span class="line">![<span class="string">bg left:33%</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側 33% 畫面 --&gt;</span><br><span class="line">![<span class="string">bg right</span>](<span class="link">https://picsum.photos/720?image=29</span>) &lt;!-- 充滿右側畫面 --&gt;</span><br></pre></td></tr></table></figure></div>
+<p><code>bg left</code> 預覽</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://i.imgur.com/d2r1zdj.png"
+                     data-src="https://i.imgur.com/jJXSHNV.png"
+                      alt="bg left"
+                ></p>
+<p><code>bg left:33%</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/uJ73gpD.png"
+                      alt="bg left:33%"
+                ></p>
+<p><code>bg right</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MDRqycI.png"
+                      alt="bg right"
+                ></p>
+<h3 id="5-數學表示式"><a href="#5-數學表示式" class="headerlink" title="5. 數學表示式"></a>5. 數學表示式</h3><p>Marp 支援使用 Latex 語法來撰寫數學式，<br>只要使用 $…$ 或 $$…$$ 包含著 Latex 數學式<br>即可透過 Katex 或 MathJax 套件來顯示數學式。<br>現在我們在 Markdown 中輸入一下 Latex 表示式</p>
+<p>輸入 Latex 表示式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\sum_&#123;n=0&#125;^&#123;\infty&#125;=\frac&#123;f^&#123;(n)&#125;(a)&#125;&#123;n!&#125;(x-a)^n</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>顯示結果</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/i7W0FJ7.png"
                      
                 ></p>
-<p> 將檔案解壓縮，並放到 <code>C:\Program Files\ngrok</code> 底下</p>
-<p> 然後 打開 進階設定  </p>
-<ul>
-<li>打開路徑 <code>設定/系統/關於/進階系統設定</code></li>
+<h2 id="匯出投影片"><a href="#匯出投影片" class="headerlink" title="匯出投影片"></a>匯出投影片</h2><p>只要選擇 右上角 兩個三角形圖案</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gcu5NZb.png"
+                     
+                ></p>
+<p>選擇 第一項</p>
+<p><code>export Slide Deck</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/bssChVz.png"
+                     
+                ></p>
+<p>就可以順利匯出pdf檔案了</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p><code>marp</code> 很方便於常常寫 markDown 文件的人來做使用，<br>可以將已經寫好的文件直接轉換成投影片，<br>可以省去時間在那邊拉圖，排版等事情</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.casper.tw/development/2019/11/23/ten-mins-learn-markdown/" >十分鐘快速掌握 Markdown <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/Markdown" >Markdown 維基百科 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >VScode套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown" >官方文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://yfwu.dev/tools/2021/12/13/marp.html" >Marp 使用細節 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E7%B0%A1%E5%A0%B1%E6%8E%92%E7%89%88-%E5%B0%87%E7%B2%BE%E7%A5%9E%E5%B0%88%E6%B3%A8%E5%9C%A8%E6%BA%96%E5%82%99%E6%BC%94%E8%AC%9B%E4%B8%8A-eab8a0668733" >如何快速完成簡報排版，將精神專注在準備演講上？使用 Marp 套件轉換 Markdown 成簡報 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://jdev.tw/blog/5839/marp-markdown-presentation-writer" >使用Marp以Markdown快速製作簡報，並匯出HTML、PPTX與PDF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.yeshuanova.com/2021/06/marp_vscode/" >用 Markdown 撰寫 Slide - 使用 Marp 套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/mfIXVCO.png"
-                     
-                ></p>
-<p>點選 進階&#x2F; 環境變數</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/cSBEJvS.png"
-                     
-                ></p>
-<p>選擇 Path  並點選編輯</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/O6CoKNr.png"
-                     
-                ></p>
-<p>點選右側新增，並加入 <code>C:\Program Files\ngrok</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/0LQUQBB.png"
-                     
-                ></p>
-<p>打開終端機，並輸入 <code>ngrok</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/8N4s0C0.png"
-                     
-                ></p>
-<p>有出現內容，表示已經安裝成功</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/6PeIlY6.png"
-                     
-                ></p>
-<p>回到 ngrok 後台頁面，並照著第二步操作 連接帳號</p>
-<p>複製下方指令 並輸入終端機 </p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/J9IWkni.png"
-                     
-                ></p>
-<p>有出現這段文字，表示已經連線成功了</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/8xUDSqu.png"
-                     
-                ></p>
-<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>1.在本地開啟服務，假設服務位置為 <code>http://localhost:5173</code></p>
-<p>2.打開終端機 並輸入 <code>ngrok http 5173</code> </p>
-<p>出現此畫面表示已經成功開啟 ngrok 並且已經正在運行</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/EgsYAKA.png"
-                     
-                ></p>
-<p>接著將 <code>Forwarding</code> 這段的網址 貼到瀏覽器上</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/WDHMVKv.png"
-                     
-                ></p>
-<p>按下 <code>Vite Site</code> 按鈕</p>
-<p>就可以進入到 本機環境的網頁了 ，對外就可以直接連線</p>
-<p>每一次重新啟動 ngrok，都會產生一個新的 Forwarding，</p>
-<p>除非你有付費的 ngrok 帳號，否則你每次都要重新啟動 ngrok，才能取得新的</p>
-<p>如果要停止 ngrok ， 只要按下 <code>Ctrl + C</code></p>
 
             </div>
 
@@ -589,16 +572,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>標題:</strong> Ngrok 介紹</li>
+        <li><strong>標題:</strong> Markdown Marp VSCode 套件使用教學</li>
         <li><strong>作者:</strong> Mao</li>
-        <li><strong>撰寫于:</strong> 2023-08-24 22:00:00</li>
+        <li><strong>撰寫于:</strong> 2023-10-11 15:50:00</li>
         
             <li>
-                <strong>更新于:</strong> 2023-09-06 22:58:43
+                <strong>更新于:</strong> 2023-10-12 00:51:48
             </li>
         
         <li>
-            <strong>連結:</strong> https://mao0507.github.io/2023/08/24/tools/ngrok/
+            <strong>連結:</strong> https://mao0507.github.io/2023/10/11/tools/marp/
         </li>
         <li>
             <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 進行許可。
@@ -624,29 +607,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/10/11/tools/marp/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">Markdown Marp VSCode 套件使用教學</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/08/05/vscode/vscode%E8%A8%AD%E5%AE%9AMarkdown%E8%A7%B8%E7%99%BC%E4%BD%BF%E7%94%A8%E8%80%85%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5/"
+                            href="/2023/08/24/tools/ngrok/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">vscode設定Markdown觸發使用者程式碼片段</span>
+                                    <span class="post-nav-title-item">Ngrok 介紹</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -724,8 +692,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此頁目錄</div>
-        <div class="page-title">Ngrok 介紹</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E5%AD%B8"><span class="nav-text">教學</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">使用方式</span></a></li></ol>
+        <div class="page-title">Markdown Marp VSCode 套件使用教學</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%B4%B9"><span class="nav-text">介紹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFMarkdown"><span class="nav-text">什麼是Markdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D"><span class="nav-text">安裝</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A"><span class="nav-text">基本設定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95"><span class="nav-text">基本語法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%86%E9%A0%81"><span class="nav-text">1. 分頁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%A8%AD%E5%AE%9A%E5%9C%96%E7%89%87%E5%AF%AC%E5%BA%A6"><span class="nav-text">2. 設定圖片寬度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A8%AD%E5%AE%9A%E5%9C%96%E7%89%87%E7%89%B9%E6%95%88"><span class="nav-text">3. 設定圖片特效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%8E%A7%E5%88%B6%E8%83%8C%E6%99%AF%E5%9C%96%E4%BD%8D%E7%BD%AE"><span class="nav-text">4.1 控制背景圖位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%95%B8%E5%AD%B8%E8%A1%A8%E7%A4%BA%E5%BC%8F"><span class="nav-text">5. 數學表示式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%AF%E5%87%BA%E6%8A%95%E5%BD%B1%E7%89%87"><span class="nav-text">匯出投影片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-text">總結</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="nav-text">參考資料</span></a></li></ol>
 
     </div>
 </div>

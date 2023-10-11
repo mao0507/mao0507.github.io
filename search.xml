@@ -251,6 +251,124 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown Marp VSCode 套件使用教學</title>
+    <url>/2023/10/11/tools/marp/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>常常要開會議報告，需要講稿的時候，都還要特別去做PPT或是PDF，對於一個工程師來說，這是一種折磨</p>
+<p>可以用順手的工具去做投影片就可以輕鬆很多，也可以省去很多精力</p>
+<p>於是就找到了 <code>Marp</code> 這個功能套件</p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><code>Marp</code> 是一個基於 Markdown 語法的投影片製作工具。</p>
+<p>可以使用 Markdown 語法 快速建立 報告用的投影片</p>
+<h2 id="什麼是Markdown"><a href="#什麼是Markdown" class="headerlink" title="什麼是Markdown"></a>什麼是Markdown</h2><blockquote>
+<p>Markdown是一種輕量級標記式語言，它允許人們使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。</p>
+</blockquote>
+<p><a class="link"   href="https://zh.wikipedia.org/zh-tw/Markdown" >來源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>有 VsCode 專用套件和 獨立的 CLI 可以做選擇</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gyYEoAn.jpg"
+                     
+                ></p>
+<p><code>本次以 VsCode 套件為主</code></p>
+<p>安裝 Marp 非常簡單<br>只要在 VsCode 中安裝<a class="link"   href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >Marp for VS Code <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的 Plugin 即可。</p>
+<h1 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h1><p>要在 VsCode 使用 Marp ，<br>首先我們要在文件最上方加入以下內容：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">--- </span><br><span class="line">marp: true </span><br><span class="line">theme: gaia</span><br><span class="line">paginate: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+
+<p>告訴Vscode 我們開始使用 marp的套件了</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">marp : <span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
+
+<p>theme 是指簡報主題的意思，<br>Marp 預設提供了 3 種簡報主題：<br><br></p>
+<ul>
+<li>Default 預設主題</li>
+<li>uncover 主題具有三個設計理念：簡約、簡約、現代</li>
+<li>Gaia 主題基於<a class="link"   href="https://github.com/yhatt/marp" >yhatt&#x2F;marp <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的經典設計</li>
+</ul>
+<br>
+
+<p>每種主題在背景顏色，<br>Markdown文字的擺放位置都會有差異</p>
+<p><a class="link"   href="https://github.com/marp-team/marp-core/tree/main/themes?source=post_page-----eab8a0668733--------------------------------#readme" >參考說明 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>paginate 為 顯示頁數的選項</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">paginate:<span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="基本語法"><a href="#基本語法" class="headerlink" title="基本語法"></a>基本語法</h2><h3 id="1-分頁"><a href="#1-分頁" class="headerlink" title="1. 分頁"></a>1. 分頁</h3><p>可使用 <code>---</code> 標記來分隔不同頁面的 Slide</p>
+<div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Page 1</span></span><br><span class="line">Hello World!</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Page 2</span></span><br><span class="line">Hello World 2!</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-設定圖片寬度"><a href="#2-設定圖片寬度" class="headerlink" title="2. 設定圖片寬度"></a>2. 設定圖片寬度</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">width:200px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片寬度為 200px --&gt;</span><br><span class="line">![<span class="string">height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片高度為 300px --&gt;</span><br><span class="line">![<span class="string">width:200px height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 同時設定兩者屬性 --&gt;</span><br><span class="line">![<span class="string">w:32 h:32</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 32x32 px --&gt;</span><br><span class="line">![<span class="string">width:90% height:80%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 90% 寬度 x 80% 高度  --&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-設定圖片特效"><a href="#3-設定圖片特效" class="headerlink" title="3. 設定圖片特效"></a>3. 設定圖片特效</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">blur</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片 模糊化  --&gt;</span><br><span class="line">![<span class="string">blur:10px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片模糊化，參數為 10px(越大越模糊)  --&gt;</span><br><span class="line">![<span class="string">grayscale:1</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片灰階化  --&gt;</span><br><span class="line">![<span class="string">brightness:.8 sepia:50%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 多重特效設定 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 4. 設定背景圖片</span></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">![bg](bg.jpg) &lt;!-- 設定 bg.jpg 為背景圖片--&gt;</span></span><br><span class="line"><span class="code">![bg fit](bg.jpg) &lt;!-- 設定 bg.jgp 的圖片大小調整為背景框架大小 --&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="4-1-控制背景圖位置"><a href="#4-1-控制背景圖位置" class="headerlink" title="4.1 控制背景圖位置"></a>4.1 控制背景圖位置</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">bg left</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側畫面 --&gt;</span><br><span class="line">![<span class="string">bg left:33%</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側 33% 畫面 --&gt;</span><br><span class="line">![<span class="string">bg right</span>](<span class="link">https://picsum.photos/720?image=29</span>) &lt;!-- 充滿右側畫面 --&gt;</span><br></pre></td></tr></table></figure></div>
+<p><code>bg left</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/jJXSHNV.png"
+                      alt="bg left"
+                ></p>
+<p><code>bg left:33%</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/uJ73gpD.png"
+                      alt="bg left:33%"
+                ></p>
+<p><code>bg right</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MDRqycI.png"
+                      alt="bg right"
+                ></p>
+<h3 id="5-數學表示式"><a href="#5-數學表示式" class="headerlink" title="5. 數學表示式"></a>5. 數學表示式</h3><p>Marp 支援使用 Latex 語法來撰寫數學式，<br>只要使用 $…$ 或 $$…$$ 包含著 Latex 數學式<br>即可透過 Katex 或 MathJax 套件來顯示數學式。<br>現在我們在 Markdown 中輸入一下 Latex 表示式</p>
+<p>輸入 Latex 表示式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\sum_&#123;n=0&#125;^&#123;\infty&#125;=\frac&#123;f^&#123;(n)&#125;(a)&#125;&#123;n!&#125;(x-a)^n</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>顯示結果</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/i7W0FJ7.png"
+                     
+                ></p>
+<h2 id="匯出投影片"><a href="#匯出投影片" class="headerlink" title="匯出投影片"></a>匯出投影片</h2><p>只要選擇 右上角 兩個三角形圖案</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gcu5NZb.png"
+                     
+                ></p>
+<p>選擇 第一項</p>
+<p><code>export Slide Deck</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/bssChVz.png"
+                     
+                ></p>
+<p>就可以順利匯出pdf檔案了</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p><code>marp</code> 很方便於常常寫 markDown 文件的人來做使用，<br>可以將已經寫好的文件直接轉換成投影片，<br>可以省去時間在那邊拉圖，排版等事情</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a class="link"   href="https://www.casper.tw/development/2019/11/23/ten-mins-learn-markdown/" >十分鐘快速掌握 Markdown <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://zh.wikipedia.org/zh-tw/Markdown" >Markdown 維基百科 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >VScode套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown" >官方文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </li>
+<li><a class="link"   href="https://yfwu.dev/tools/2021/12/13/marp.html" >Marp 使用細節 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E7%B0%A1%E5%A0%B1%E6%8E%92%E7%89%88-%E5%B0%87%E7%B2%BE%E7%A5%9E%E5%B0%88%E6%B3%A8%E5%9C%A8%E6%BA%96%E5%82%99%E6%BC%94%E8%AC%9B%E4%B8%8A-eab8a0668733" >如何快速完成簡報排版，將精神專注在準備演講上？使用 Marp 套件轉換 Markdown 成簡報 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://jdev.tw/blog/5839/marp-markdown-presentation-writer" >使用Marp以Markdown快速製作簡報，並匯出HTML、PPTX與PDF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://blog.yeshuanova.com/2021/06/marp_vscode/" >用 Markdown 撰寫 Slide - 使用 Marp 套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安裝NVM教學</title>
     <url>/2023/06/05/node/nvm%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在工作中常常會需要去接手他人的程式碼，每個專案所使用的開發環境不一定相同，用的node.js版本就有很多不同的版本，<br>這個時候就可以使用<code>NVM</code>來輕鬆切換不同版本的node.js，來解決不同版本所產生的問題。</p>
