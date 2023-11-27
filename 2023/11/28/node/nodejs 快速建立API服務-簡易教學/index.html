@@ -13,26 +13,24 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://mao0507.github.io/2023/11/04/ts/typescript找不到模組/"/>
+    <link rel="canonical" href="https://mao0507.github.io/2023/11/28/node/nodejs 快速建立api服務-簡易教學/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="錯誤訊息 報錯原因：typescript 只能理解 .ts 檔案，無法理解 .vue檔案 解決方法在專案根目錄專案 或是 src 資料夾底下建立一個，不為main，字尾為.d.ts的檔案 然後加入此段程式碼 12345declare module &amp;#x27;*.vue&amp;#x27; &amp;#123;  import &amp;#123; ComponentOptions &amp;#125; from &amp;#x27;v">
+        <meta name="description" content="安裝 nodejs下載連結  建立專案123$ mkdir express-server &amp;&amp; cd express-server$ npm init -y $ npm install express  設定 Web Server建立 app.js12345678910111213141516171819202122232425262728293031323334353637383">
 <meta property="og:type" content="article">
-<meta property="og:title" content="typescript 找不到模組 &#39;.&#x2F;App.vue&#39; 或其對應的型別宣告。">
-<meta property="og:url" content="https://mao0507.github.io/2023/11/04/ts/typescript%E6%89%BE%E4%B8%8D%E5%88%B0%E6%A8%A1%E7%B5%84/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://mao0507.github.io/2023/11/28/node/nodejs%20%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8BAPI%E6%9C%8D%E5%8B%99-%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="錯誤訊息 報錯原因：typescript 只能理解 .ts 檔案，無法理解 .vue檔案 解決方法在專案根目錄專案 或是 src 資料夾底下建立一個，不為main，字尾為.d.ts的檔案 然後加入此段程式碼 12345declare module &amp;#x27;*.vue&amp;#x27; &amp;#123;  import &amp;#123; ComponentOptions &amp;#125; from &amp;#x27;v">
+<meta property="og:description" content="安裝 nodejs下載連結  建立專案123$ mkdir express-server &amp;&amp; cd express-server$ npm init -y $ npm install express  設定 Web Server建立 app.js12345678910111213141516171819202122232425262728293031323334353637383">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/wGrMi0x.png">
-<meta property="og:image" content="https://i.imgur.com/jJotjgG.png">
-<meta property="article:published_time" content="2023-11-03T20:50:00.000Z">
-<meta property="article:modified_time" content="2023-11-03T20:55:34.704Z">
+<meta property="og:image" content="https://i.imgur.com/zpI0svS.png">
+<meta property="article:published_time" content="2023-11-27T17:16:32.626Z">
+<meta property="article:modified_time" content="2023-11-27T17:28:23.890Z">
 <meta property="article:author" content="mao">
-<meta property="article:tag" content="typescript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/wGrMi0x.png">
+<meta name="twitter:image" content="https://i.imgur.com/zpI0svS.png">
     
     
         <!-- Google tag (gtag.js) -->
@@ -53,8 +51,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。 -
         
         Mao&#39;s Blog
     </title>
@@ -377,7 +373,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。</h1>
+                    <h1 class="article-title-regular"></h1>
                 </div>
             
                 
@@ -399,42 +395,20 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-11-04 04:50</span>
-        <span class="mobile">2023-11-04 04:50</span>
+        <span class="desktop">2023-11-28 01:16:32</span>
+        <span class="mobile">2023-11-28 01:16</span>
         <span class="hover-info">撰寫</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-04 04:55:34</span>
-            <span class="mobile">2023-11-04 04:55</span>
+            <span class="desktop">2023-11-28 01:28:23</span>
+            <span class="mobile">2023-11-28 01:28</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
-        <span class="article-categories article-meta-item">
-            <i class="fa-regular fa-folders"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/typescript/">typescript</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fa-regular fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/typescript/">typescript</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
     
 
     
@@ -453,23 +427,74 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="錯誤訊息"><a href="#錯誤訊息" class="headerlink" title="錯誤訊息"></a>錯誤訊息</h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/wGrMi0x.png"
-                     
-                ></p>
-<p>報錯原因：typescript 只能理解 .ts 檔案，無法理解 .vue檔案</p>
-<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>在專案根目錄專案 或是 <code>src</code> 資料夾底下建立一個，不為<code>main</code>，字尾為<code>.d.ts</code>的檔案</p>
-<p>然後加入此段程式碼</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="variable language_">module</span> <span class="string">&#x27;*.vue&#x27;</span> &#123;</span><br><span class="line">  <span class="keyword">import</span> &#123; <span class="title class_">ComponentOptions</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">  <span class="keyword">const</span> <span class="attr">componentOptions</span>: <span class="title class_">ComponentOptions</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> componentOptions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+                <h2 id="安裝-nodejs"><a href="#安裝-nodejs" class="headerlink" title="安裝 nodejs"></a>安裝 nodejs</h2><p><a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/en/download" >下載連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> express-server &amp;&amp; <span class="built_in">cd</span> express-server</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm init -y</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install express</span></span><br></pre></td></tr></table></figure></div>
 
-<p><img  
+<h2 id="設定-Web-Server"><a href="#設定-Web-Server" class="headerlink" title="設定 Web Server"></a>設定 Web Server</h2><h3 id="建立-app-js"><a href="#建立-app-js" class="headerlink" title="建立 app.js"></a>建立 app.js</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">express</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// req =&gt; request 請求內容</span></span><br><span class="line"><span class="comment">// res =&gt; response 回應內容</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//GET 請求</span></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁GET 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello GET &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//POST 請求</span></span><br><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁POST 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello POST &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//PUT 請求</span></span><br><span class="line">app.<span class="title function_">put</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁PUT 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello PUT &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//DELETE 請求</span></span><br><span class="line">app.<span class="title function_">delete</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁DELETE 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello DELETE &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 監聽 Port</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PORT</span> = <span class="number">9527</span>;</span><br><span class="line">app.<span class="title function_">listen</span>(<span class="variable constant_">PORT</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`server working now on <span class="subst">$&#123;PORT&#125;</span>`</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="執行-app-js-啟動服務器"><a href="#執行-app-js-啟動服務器" class="headerlink" title="執行 app.js 啟動服務器"></a>執行 app.js 啟動服務器</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">node app.js</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="測試API-連線"><a href="#測試API-連線" class="headerlink" title="測試API 連線"></a>測試API 連線</h2><h3 id="使用-postman"><a href="#使用-postman" class="headerlink" title="使用 postman"></a>使用 postman</h3><h4 id="甚麼是postman"><a href="#甚麼是postman" class="headerlink" title="甚麼是postman"></a>甚麼是postman</h4><p>Postman 是一個可以模擬 HTTP Request 的工具，其中包含常見的 HTTP 的請求方式，<br>例如： GET 、POST、PUT、DELETE，<br>而它的主要功能就是能夠快速的測試你的 API 是否能夠正常的請求資料，<br>並得到正確的請求結果。除了快速測試的功能以外， Postman 還擁有非常容易使用的介面</p>
+<h4 id="下載postman"><a href="#下載postman" class="headerlink" title="下載postman"></a>下載postman</h4><p><a class="link"   target="_blank" rel="noopener" href="https://www.postman.com/downloads/" >下載連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h4 id="安裝後並執行postman"><a href="#安裝後並執行postman" class="headerlink" title="安裝後並執行postman"></a>安裝後並執行postman</h4><ol>
+<li>在輸入框輸入 <code>localhost:9527</code></li>
+<li>模式選擇 <code>GET</code></li>
+<li>按下 send</li>
+<li>會看到 <code>Hello GET</code><br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://i.imgur.com/jJotjgG.png"
-                     
-                ></p>
+                     data-src="https://i.imgur.com/zpI0svS.png"
+                      alt="image"
+                ></li>
+</ol>
+<h2 id="加入套件"><a href="#加入套件" class="headerlink" title="加入套件"></a>加入套件</h2><h3 id="nodemon"><a href="#nodemon" class="headerlink" title="nodemon"></a>nodemon</h3><h4 id="nodemon-功能"><a href="#nodemon-功能" class="headerlink" title="nodemon 功能"></a>nodemon 功能</h4><ul>
+<li>自動重啟應用程式</li>
+<li>持續偵測你的預設程式</li>
+<li>默認支持 node＆coffeescript，但是易於運行任何可執行文件（比如python，make等）</li>
+<li>可以忽略特定文件或目錄</li>
+<li>觀察指定的目錄資料夾</li>
+<li>與服務器應用程序或一次運行公用程序和 REPLs 一起使用</li>
+<li>可在 node 中被存取使用</li>
+</ul>
+<h4 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install nodemon -g</span>  </span><br></pre></td></tr></table></figure></div>
+
+
+<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nodemon index.js</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h4 id="script-設定"><a href="#script-設定" class="headerlink" title="script 設定"></a>script 設定</h4><p>可以到 package.json檔案內中，<br>在<code>scrip</code> 這個物件底下新建立一個腳本</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">   <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span><span class="string">&quot;nodemon app.js&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure></div>
+
+<p>這樣以後要執行服務的時候就可以直接輸入 </p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm run start</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+<h3 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a>dotenv</h3><h4 id="透過-dotenv-套件來隱藏敏感資訊"><a href="#透過-dotenv-套件來隱藏敏感資訊" class="headerlink" title="透過 dotenv 套件來隱藏敏感資訊"></a>透過 dotenv 套件來隱藏敏感資訊</h4><p>node.js 是沒有辦法直接讀取到 .env 檔案的，需要另外安裝套件才能讀取<br>可以將 sql連線 等敏感資料都寫在 .env 來進行管理 </p>
+<h4 id="安裝-1"><a href="#安裝-1" class="headerlink" title="安裝"></a>安裝</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install dotenv</span>  </span><br></pre></td></tr></table></figure></div>
+
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// env檔案</span></span><br><span class="line"></span><br><span class="line">number=<span class="number">123</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;dotenv&#x27;</span>).<span class="title function_">config</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(process.<span class="property">env</span>.<span class="property">number</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 輸出結果為: 123</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="bodyparser"><a href="#bodyparser" class="headerlink" title="bodyparser"></a>bodyparser</h3><h4 id="為何要安裝"><a href="#為何要安裝" class="headerlink" title="為何要安裝"></a>為何要安裝</h4><p>body-parser是非常常用的一個express中介層(middleware)，<br>作用是對post請求的請求體進行解析。</p>
+<h4 id="body-parser主要做了什麼"><a href="#body-parser主要做了什麼" class="headerlink" title="body-parser主要做了什麼"></a>body-parser主要做了什麼</h4><p>處理不同類型的請求體：例如text、json、urlencoded等，對應的封包主體的格式不同。<br>處理不同的編碼：例如utf8、gbk等。<br>處理不同的壓縮類型：比如gzip、deflare等。<br>其他邊界、異常的處理。</p>
+<h4 id="安裝-2"><a href="#安裝-2" class="headerlink" title="安裝"></a>安裝</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install body-parser</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h4 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h4><p>使用非常簡單，以下兩行程式碼已經涵蓋了大部分的使用場景。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">&#x27;body-parser&#x27;</span>)</span><br><span class="line">app.<span class="title function_">use</span>(bodyParser.<span class="title function_">json</span>());</span><br><span class="line">app.<span class="title function_">use</span>(bodyParser.<span class="title function_">urlencoded</span>(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a class="link"   target="_blank" rel="noopener" href="https://expressjs.com/zh-tw/" >express <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://andy6804tw.github.io/2017/12/24/nodemon-tutorial/" >nodemon <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://www.npmjs.com/package/dotenv" >dotenv <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/chyingp/p/nodejs-learning-express-body-parser.html" >body-parser <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
             </div>
 
@@ -477,16 +502,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>標題:</strong> typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。</li>
+        <li><strong>標題:</strong> </li>
         <li><strong>作者:</strong> Mao</li>
-        <li><strong>撰寫于:</strong> 2023-11-04 04:50:00</li>
+        <li><strong>撰寫于:</strong> 2023-11-28 01:16:32</li>
         
             <li>
-                <strong>更新于:</strong> 2023-11-04 04:55:34
+                <strong>更新于:</strong> 2023-11-28 01:28:23
             </li>
         
         <li>
-            <strong>連結:</strong> https://mao0507.github.io/2023/11/04/ts/typescript找不到模組/
+            <strong>連結:</strong> https://mao0507.github.io/2023/11/28/node/nodejs 快速建立API服務-簡易教學/
         </li>
         <li>
             <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 進行許可。
@@ -498,43 +523,20 @@
             
 
             
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/typescript/">#typescript</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
 
             
 
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/11/28/node/nodejs%20%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8BAPI%E6%9C%8D%E5%8B%99-%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item"></span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/11/04/vite/vite%E5%B0%88%E6%A1%88%E9%A0%85%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8@%E4%BB%A3%E6%9B%BFsrc/"
+                            href="/2023/11/04/ts/typescript%E6%89%BE%E4%B8%8D%E5%88%B0%E6%A8%A1%E7%B5%84/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">vite 專案項目中 使用 @ 代替 src</span>
+                                    <span class="post-nav-title-item">typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -612,8 +614,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此頁目錄</div>
-        <div class="page-title">typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF"><span class="nav-text">錯誤訊息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95"><span class="nav-text">解決方法</span></a></li></ol>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-nodejs"><span class="nav-text">安裝 nodejs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E5%B0%88%E6%A1%88"><span class="nav-text">建立專案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A-Web-Server"><span class="nav-text">設定 Web Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-app-js"><span class="nav-text">建立 app.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%B7%E8%A1%8C-app-js-%E5%95%9F%E5%8B%95%E6%9C%8D%E5%8B%99%E5%99%A8"><span class="nav-text">執行 app.js 啟動服務器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%AC%E8%A9%A6API-%E9%80%A3%E7%B7%9A"><span class="nav-text">測試API 連線</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-postman"><span class="nav-text">使用 postman</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%85%A5%E5%A5%97%E4%BB%B6"><span class="nav-text">加入套件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nodemon"><span class="nav-text">nodemon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dotenv"><span class="nav-text">dotenv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bodyparser"><span class="nav-text">bodyparser</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83"><span class="nav-text">參考</span></a></li></ol>
 
     </div>
 </div>

@@ -61,68 +61,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安裝NVM教學</title>
-    <url>/2023/06/05/node/nvm%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在工作中常常會需要去接手他人的程式碼，每個專案所使用的開發環境不一定相同，用的node.js版本就有很多不同的版本，<br>這個時候就可以使用<code>NVM</code>來輕鬆切換不同版本的node.js，來解決不同版本所產生的問題。</p>
-<p><code>NVM</code> 為 <code>Node Version Manager</code> 的縮寫 ， 意思就是 <code>Node.js的版本管理器</code></p>
-<p>常使用到的功能 : </p>
-<ul>
-<li>切換node.js版本</li>
-<li>安裝不同版本的node.js作為環境</li>
-</ul>
-<h2 id="下載教學"><a href="#下載教學" class="headerlink" title="下載教學"></a>下載教學</h2><ul>
-<li>Windows<br>Windows 有提供安裝工具，下載後照著安裝精靈依序完成即可運作，<a class="link"   href="https://github.com/coreybutler/nvm-windows" >下載連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</li>
-</ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/L5YqZZ0.png"
-                     
-                ></p>
-<p>點擊 Download Now!</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/PM9CM6m.png"
-                     
-                ></p>
-<p>下載當前最新版本，並直接執行安裝</p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><h3 id="檢查-版本"><a href="#檢查-版本" class="headerlink" title="檢查 版本"></a>檢查 版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm -v </span><br></pre></td></tr></table></figure></div>
-
-<h3 id="安裝-最新版本"><a href="#安裝-最新版本" class="headerlink" title="安裝 最新版本"></a>安裝 最新版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install latest</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="安裝-LTS-版本"><a href="#安裝-LTS-版本" class="headerlink" title="安裝 LTS 版本"></a>安裝 LTS 版本</h3><p>lts 為長期支持版本，版本bug較少</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install lts</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="檢查-近期可用版本"><a href="#檢查-近期可用版本" class="headerlink" title="檢查 近期可用版本"></a>檢查 近期可用版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="安裝-特定版本"><a href="#安裝-特定版本" class="headerlink" title="安裝 特定版本"></a>安裝 特定版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install &#123;版本號&#125;</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="檢視-已安裝版本"><a href="#檢視-已安裝版本" class="headerlink" title="檢視 已安裝版本"></a>檢視 已安裝版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="切換-版本"><a href="#切換-版本" class="headerlink" title="切換 版本"></a>切換 版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm use latest (最新版本)</span><br><span class="line"></span><br><span class="line">nvm use lts (長期支持版本)</span><br><span class="line"></span><br><span class="line">nvm use &#123;已安裝版本號&#125; (使用已安裝的版本)</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="移除-已安裝版本"><a href="#移除-已安裝版本" class="headerlink" title="移除 已安裝版本"></a>移除 已安裝版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm uninstall &#123;已安裝版本號&#125;</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="備註-環境變數不見"><a href="#備註-環境變數不見" class="headerlink" title="[備註] 環境變數不見"></a>[備註] 環境變數不見</h3><p><a class="link"   href="https://israynotarray.com/nodejs/20190801/449913843/" >參考網址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </p>
-<p>開啟環境變數 快捷鍵 win + pause (pageUp 上面那顆)</p>
-<p>通常預設</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\&#123;電腦使用者&#125;\AppData\Roaming\npm</span><br></pre></td></tr></table></figure></div>
-
-
-<h5 id="可查詢版本"><a href="#可查詢版本" class="headerlink" title="可查詢版本"></a>可查詢版本</h5><p><a class="link"   href="https://nodejs.org/en/blog/release/" >查詢網址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>Node</category>
-      </categories>
-      <tags>
-        <tag>NodeJs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>eslint 安裝教學</title>
     <url>/2023/06/06/eslint/eslint%E5%AE%89%E8%A3%9D%E8%A8%AD%E5%AE%9A/</url>
     <content><![CDATA[<h1 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h1><h2 id="安裝-eslint"><a href="#安裝-eslint" class="headerlink" title="安裝 eslint"></a>安裝 eslint</h2><p>安裝方式</p>
@@ -221,124 +159,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown Marp VSCode 套件使用教學</title>
-    <url>/2023/10/11/tools/marp/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>常常要開會議報告，需要講稿的時候，都還要特別去做PPT或是PDF，對於一個工程師來說，這是一種折磨</p>
-<p>可以用順手的工具去做投影片就可以輕鬆很多，也可以省去很多精力</p>
-<p>於是就找到了 <code>Marp</code> 這個功能套件</p>
-<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><code>Marp</code> 是一個基於 Markdown 語法的投影片製作工具。</p>
-<p>可以使用 Markdown 語法 快速建立 報告用的投影片</p>
-<h2 id="什麼是Markdown"><a href="#什麼是Markdown" class="headerlink" title="什麼是Markdown"></a>什麼是Markdown</h2><blockquote>
-<p>Markdown是一種輕量級標記式語言，它允許人們使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。</p>
-</blockquote>
-<p><a class="link"   href="https://zh.wikipedia.org/zh-tw/Markdown" >來源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>有 VsCode 專用套件和 獨立的 CLI 可以做選擇</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/gyYEoAn.jpg"
-                     
-                ></p>
-<p><code>本次以 VsCode 套件為主</code></p>
-<p>安裝 Marp 非常簡單<br>只要在 VsCode 中安裝<a class="link"   href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >Marp for VS Code <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的 Plugin 即可。</p>
-<h1 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h1><p>要在 VsCode 使用 Marp ，<br>首先我們要在文件最上方加入以下內容：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">--- </span><br><span class="line">marp: true </span><br><span class="line">theme: gaia</span><br><span class="line">paginate: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
-
-<p>告訴Vscode 我們開始使用 marp的套件了</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">marp : <span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
-
-<p>theme 是指簡報主題的意思，<br>Marp 預設提供了 3 種簡報主題：<br><br></p>
-<ul>
-<li>Default 預設主題</li>
-<li>uncover 主題具有三個設計理念：簡約、簡約、現代</li>
-<li>Gaia 主題基於<a class="link"   href="https://github.com/yhatt/marp" >yhatt&#x2F;marp <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的經典設計</li>
-</ul>
-<br>
-
-<p>每種主題在背景顏色，<br>Markdown文字的擺放位置都會有差異</p>
-<p><a class="link"   href="https://github.com/marp-team/marp-core/tree/main/themes?source=post_page-----eab8a0668733--------------------------------#readme" >參考說明 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>paginate 為 顯示頁數的選項</p>
-<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">paginate:<span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
-
-
-<h2 id="基本語法"><a href="#基本語法" class="headerlink" title="基本語法"></a>基本語法</h2><h3 id="1-分頁"><a href="#1-分頁" class="headerlink" title="1. 分頁"></a>1. 分頁</h3><p>可使用 <code>---</code> 標記來分隔不同頁面的 Slide</p>
-<div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Page 1</span></span><br><span class="line">Hello World!</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Page 2</span></span><br><span class="line">Hello World 2!</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-設定圖片寬度"><a href="#2-設定圖片寬度" class="headerlink" title="2. 設定圖片寬度"></a>2. 設定圖片寬度</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">width:200px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片寬度為 200px --&gt;</span><br><span class="line">![<span class="string">height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片高度為 300px --&gt;</span><br><span class="line">![<span class="string">width:200px height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 同時設定兩者屬性 --&gt;</span><br><span class="line">![<span class="string">w:32 h:32</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 32x32 px --&gt;</span><br><span class="line">![<span class="string">width:90% height:80%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 90% 寬度 x 80% 高度  --&gt;</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="3-設定圖片特效"><a href="#3-設定圖片特效" class="headerlink" title="3. 設定圖片特效"></a>3. 設定圖片特效</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">blur</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片 模糊化  --&gt;</span><br><span class="line">![<span class="string">blur:10px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片模糊化，參數為 10px(越大越模糊)  --&gt;</span><br><span class="line">![<span class="string">grayscale:1</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片灰階化  --&gt;</span><br><span class="line">![<span class="string">brightness:.8 sepia:50%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 多重特效設定 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 4. 設定背景圖片</span></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">![bg](bg.jpg) &lt;!-- 設定 bg.jpg 為背景圖片--&gt;</span></span><br><span class="line"><span class="code">![bg fit](bg.jpg) &lt;!-- 設定 bg.jgp 的圖片大小調整為背景框架大小 --&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-<h3 id="4-1-控制背景圖位置"><a href="#4-1-控制背景圖位置" class="headerlink" title="4.1 控制背景圖位置"></a>4.1 控制背景圖位置</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">bg left</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側畫面 --&gt;</span><br><span class="line">![<span class="string">bg left:33%</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側 33% 畫面 --&gt;</span><br><span class="line">![<span class="string">bg right</span>](<span class="link">https://picsum.photos/720?image=29</span>) &lt;!-- 充滿右側畫面 --&gt;</span><br></pre></td></tr></table></figure></div>
-<p><code>bg left</code> 預覽</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/jJXSHNV.png"
-                      alt="bg left"
-                ></p>
-<p><code>bg left:33%</code> 預覽</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/uJ73gpD.png"
-                      alt="bg left:33%"
-                ></p>
-<p><code>bg right</code> 預覽</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/MDRqycI.png"
-                      alt="bg right"
-                ></p>
-<h3 id="5-數學表示式"><a href="#5-數學表示式" class="headerlink" title="5. 數學表示式"></a>5. 數學表示式</h3><p>Marp 支援使用 Latex 語法來撰寫數學式，<br>只要使用 $…$ 或 $$…$$ 包含著 Latex 數學式<br>即可透過 Katex 或 MathJax 套件來顯示數學式。<br>現在我們在 Markdown 中輸入一下 Latex 表示式</p>
-<p>輸入 Latex 表示式</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\sum_&#123;n=0&#125;^&#123;\infty&#125;=\frac&#123;f^&#123;(n)&#125;(a)&#125;&#123;n!&#125;(x-a)^n</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<p>顯示結果</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/i7W0FJ7.png"
-                     
-                ></p>
-<h2 id="匯出投影片"><a href="#匯出投影片" class="headerlink" title="匯出投影片"></a>匯出投影片</h2><p>只要選擇 右上角 兩個三角形圖案</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/gcu5NZb.png"
-                     
-                ></p>
-<p>選擇 第一項</p>
-<p><code>export Slide Deck</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/bssChVz.png"
-                     
-                ></p>
-<p>就可以順利匯出pdf檔案了</p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p><code>marp</code> 很方便於常常寫 markDown 文件的人來做使用，<br>可以將已經寫好的文件直接轉換成投影片，<br>可以省去時間在那邊拉圖，排版等事情</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a class="link"   href="https://www.casper.tw/development/2019/11/23/ten-mins-learn-markdown/" >十分鐘快速掌握 Markdown <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://zh.wikipedia.org/zh-tw/Markdown" >Markdown 維基百科 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >VScode套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown" >官方文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </li>
-<li><a class="link"   href="https://yfwu.dev/tools/2021/12/13/marp.html" >Marp 使用細節 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E7%B0%A1%E5%A0%B1%E6%8E%92%E7%89%88-%E5%B0%87%E7%B2%BE%E7%A5%9E%E5%B0%88%E6%B3%A8%E5%9C%A8%E6%BA%96%E5%82%99%E6%BC%94%E8%AC%9B%E4%B8%8A-eab8a0668733" >如何快速完成簡報排版，將精神專注在準備演講上？使用 Marp 套件轉換 Markdown 成簡報 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://jdev.tw/blog/5839/marp-markdown-presentation-writer" >使用Marp以Markdown快速製作簡報，並匯出HTML、PPTX與PDF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://blog.yeshuanova.com/2021/06/marp_vscode/" >用 Markdown 撰寫 Slide - 使用 Marp 套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tools</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>console用法</title>
     <url>/2023/05/31/js/console%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<h2 id="關於Console"><a href="#關於Console" class="headerlink" title="關於Console"></a>關於Console</h2><p>在寫 JavaSrcipt的時候，要檢查運作流程或是檢查變數的狀態的時候，都會用到<code>console.log</code>來檢視程式或是參數的值，<br>但是<code>console</code>還有很多不同的用法</p>
@@ -431,116 +251,138 @@
       </tags>
   </entry>
   <entry>
-    <title>typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。</title>
-    <url>/2023/11/04/ts/typescript%E6%89%BE%E4%B8%8D%E5%88%B0%E6%A8%A1%E7%B5%84/</url>
-    <content><![CDATA[<h2 id="錯誤訊息"><a href="#錯誤訊息" class="headerlink" title="錯誤訊息"></a>錯誤訊息</h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/wGrMi0x.png"
-                     
-                ></p>
-<p>報錯原因：typescript 只能理解 .ts 檔案，無法理解 .vue檔案</p>
-<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>在專案根目錄專案 或是 <code>src</code> 資料夾底下建立一個，不為<code>main</code>，字尾為<code>.d.ts</code>的檔案</p>
-<p>然後加入此段程式碼</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">declare <span class="variable language_">module</span> <span class="string">&#x27;*.vue&#x27;</span> &#123;</span><br><span class="line">  <span class="keyword">import</span> &#123; <span class="title class_">ComponentOptions</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">  <span class="keyword">const</span> <span class="attr">componentOptions</span>: <span class="title class_">ComponentOptions</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> componentOptions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+    <title></title>
+    <url>/2023/11/28/node/nodejs%20%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8BAPI%E6%9C%8D%E5%8B%99-%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/</url>
+    <content><![CDATA[<h2 id="安裝-nodejs"><a href="#安裝-nodejs" class="headerlink" title="安裝 nodejs"></a>安裝 nodejs</h2><p><a class="link"   href="https://nodejs.org/en/download" >下載連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> express-server &amp;&amp; <span class="built_in">cd</span> express-server</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm init -y</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install express</span></span><br></pre></td></tr></table></figure></div>
 
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/jJotjgG.png"
-                     
-                ></p>
-]]></content>
-      <categories>
-        <category>typescript</category>
-      </categories>
-      <tags>
-        <tag>typescript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vite 專案項目中 使用 @ 代替 src</title>
-    <url>/2023/11/04/vite/vite%E5%B0%88%E6%A1%88%E9%A0%85%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8@%E4%BB%A3%E6%9B%BFsrc/</url>
-    <content><![CDATA[<h2 id="tpyescript"><a href="#tpyescript" class="headerlink" title="tpyescript"></a>tpyescript</h2><p>安裝 <code>@types/node</code></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn add @types/node</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; defineConfig &#125; from &#x27;vite&#x27;</span><br><span class="line">import path from &#x27;path&#x27;;</span><br><span class="line"></span><br><span class="line">export default defineConfig(&#123;</span><br><span class="line">  ...</span><br><span class="line">  </span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      &#x27;@&#x27;: path.resolve(__dirname, &#x27;src&#x27;),</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  ...</span><br><span class="line">  </span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<p>在 <code>tsconfig.json</code> 中設置</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;compilerOptions&quot;: &#123;</span><br><span class="line">    &quot;paths&quot;: &#123;</span><br><span class="line">      &quot;@/*&quot;: [</span><br><span class="line">        &quot;./src/*&quot;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
-      <categories>
-        <category>vite</category>
-      </categories>
-      <tags>
-        <tag>typescript</tag>
-        <tag>vite</tag>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode設定Markdown觸發使用者程式碼片段</title>
-    <url>/2023/08/05/vscode/vscode%E8%A8%AD%E5%AE%9AMarkdown%E8%A7%B8%E7%99%BC%E4%BD%BF%E7%94%A8%E8%80%85%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5/</url>
-    <content><![CDATA[<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>在用markdown寫blog的時候，文章都要先寫一些 <code>title</code>、<code>tags</code>、<code>categories</code> 等…<br><br><br>建置的時候才能夠順利分類，每一次都要手動打字也太累<br><br><br>於是想到vscode裡面有 使用者程式碼片段功能，可以幫助我們 快速建立好範本</p>
-<h3 id="開始建立-個人專屬的-使用者程式碼片段"><a href="#開始建立-個人專屬的-使用者程式碼片段" class="headerlink" title="開始建立 個人專屬的 使用者程式碼片段"></a>開始建立 個人專屬的 使用者程式碼片段</h3><ol>
-<li>點選 vscode 左下角齒輪</li>
-<li>選擇使用者程式碼片段</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/02OLlo1.png"
-                     
-                ></p>
-<ol start="3">
-<li>在搜尋欄位中，選擇 <code>新增全域程式碼片段檔案</code></li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/dzK3w3o.png"
-                     
-                ></p>
-<ol start="4">
-<li>建立名稱</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/mXn7UnU.png"
-                     
-                ></p>
-<ol start="5">
-<li>之後會開啟一個檔案，裡面會有預設的註解</li>
-</ol>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/TBLIGCV.png"
-                     
-                ></p>
-<ol start="6">
-<li>以下是自己寫markDown 常使用到的 程式碼片段</li>
-</ol>
-<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Print to JavaScript code area&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!js&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;```javascript&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$1&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;```&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;js區塊&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;Print to css code area&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!css&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;```css&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$1&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;```&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;css區塊&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;Print to html code area&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!html&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;```html&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$1&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;```&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;html區塊&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;print to blog template&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!blog&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;---&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;title: 設定標題&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;tags: &quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  - 設定標籤&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;categories: 設定歸檔&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;date: 建立日期&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;update: 最後更新日期&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;---&quot;</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;hexo blog 文章建立預設項目&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="設定-Web-Server"><a href="#設定-Web-Server" class="headerlink" title="設定 Web Server"></a>設定 Web Server</h2><h3 id="建立-app-js"><a href="#建立-app-js" class="headerlink" title="建立 app.js"></a>建立 app.js</h3><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">express</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// req =&gt; request 請求內容</span></span><br><span class="line"><span class="comment">// res =&gt; response 回應內容</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//GET 請求</span></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁GET 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello GET &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//POST 請求</span></span><br><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁POST 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello POST &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//PUT 請求</span></span><br><span class="line">app.<span class="title function_">put</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁PUT 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello PUT &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//DELETE 請求</span></span><br><span class="line">app.<span class="title function_">delete</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;首頁DELETE 請求&#x27;</span>);</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27; Hello DELETE &#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 監聽 Port</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PORT</span> = <span class="number">9527</span>;</span><br><span class="line">app.<span class="title function_">listen</span>(<span class="variable constant_">PORT</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`server working now on <span class="subst">$&#123;PORT&#125;</span>`</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
-<ol start="7">
-<li>建立完成自己的程式碼片段後，需要到vscode 設定去做對應的設定</li>
+<h3 id="執行-app-js-啟動服務器"><a href="#執行-app-js-啟動服務器" class="headerlink" title="執行 app.js 啟動服務器"></a>執行 app.js 啟動服務器</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">node app.js</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="測試API-連線"><a href="#測試API-連線" class="headerlink" title="測試API 連線"></a>測試API 連線</h2><h3 id="使用-postman"><a href="#使用-postman" class="headerlink" title="使用 postman"></a>使用 postman</h3><h4 id="甚麼是postman"><a href="#甚麼是postman" class="headerlink" title="甚麼是postman"></a>甚麼是postman</h4><p>Postman 是一個可以模擬 HTTP Request 的工具，其中包含常見的 HTTP 的請求方式，<br>例如： GET 、POST、PUT、DELETE，<br>而它的主要功能就是能夠快速的測試你的 API 是否能夠正常的請求資料，<br>並得到正確的請求結果。除了快速測試的功能以外， Postman 還擁有非常容易使用的介面</p>
+<h4 id="下載postman"><a href="#下載postman" class="headerlink" title="下載postman"></a>下載postman</h4><p><a class="link"   href="https://www.postman.com/downloads/" >下載連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h4 id="安裝後並執行postman"><a href="#安裝後並執行postman" class="headerlink" title="安裝後並執行postman"></a>安裝後並執行postman</h4><ol>
+<li>在輸入框輸入 <code>localhost:9527</code></li>
+<li>模式選擇 <code>GET</code></li>
+<li>按下 send</li>
+<li>會看到 <code>Hello GET</code><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/zpI0svS.png"
+                      alt="image"
+                ></li>
 </ol>
-<ul>
-<li>開啟 Command Palette (Ctrl+Shift+P)</li>
-<li>Configure language specific settings</li>
-<li>選擇markdown</li>
-<li>點選右上角，開啟設定(json)</li>
-<li>將下方這段json貼上  ↓  <div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;[markdown]&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;editor.quickSuggestions&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;other&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;comments&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;strings&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div></li>
+<h2 id="加入套件"><a href="#加入套件" class="headerlink" title="加入套件"></a>加入套件</h2><h3 id="nodemon"><a href="#nodemon" class="headerlink" title="nodemon"></a>nodemon</h3><h4 id="nodemon-功能"><a href="#nodemon-功能" class="headerlink" title="nodemon 功能"></a>nodemon 功能</h4><ul>
+<li>自動重啟應用程式</li>
+<li>持續偵測你的預設程式</li>
+<li>默認支持 node＆coffeescript，但是易於運行任何可執行文件（比如python，make等）</li>
+<li>可以忽略特定文件或目錄</li>
+<li>觀察指定的目錄資料夾</li>
+<li>與服務器應用程序或一次運行公用程序和 REPLs 一起使用</li>
+<li>可在 node 中被存取使用</li>
 </ul>
-<p>這樣設定就完成了，就可以在markdown使用自己設定好的程式碼片段了 </p>
+<h4 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install nodemon -g</span>  </span><br></pre></td></tr></table></figure></div>
+
+
+<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nodemon index.js</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h4 id="script-設定"><a href="#script-設定" class="headerlink" title="script 設定"></a>script 設定</h4><p>可以到 package.json檔案內中，<br>在<code>scrip</code> 這個物件底下新建立一個腳本</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">   <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span><span class="string">&quot;nodemon app.js&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure></div>
+
+<p>這樣以後要執行服務的時候就可以直接輸入 </p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm run start</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+<h3 id="dotenv"><a href="#dotenv" class="headerlink" title="dotenv"></a>dotenv</h3><h4 id="透過-dotenv-套件來隱藏敏感資訊"><a href="#透過-dotenv-套件來隱藏敏感資訊" class="headerlink" title="透過 dotenv 套件來隱藏敏感資訊"></a>透過 dotenv 套件來隱藏敏感資訊</h4><p>node.js 是沒有辦法直接讀取到 .env 檔案的，需要另外安裝套件才能讀取<br>可以將 sql連線 等敏感資料都寫在 .env 來進行管理 </p>
+<h4 id="安裝-1"><a href="#安裝-1" class="headerlink" title="安裝"></a>安裝</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install dotenv</span>  </span><br></pre></td></tr></table></figure></div>
+
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// env檔案</span></span><br><span class="line"></span><br><span class="line">number=<span class="number">123</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;dotenv&#x27;</span>).<span class="title function_">config</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(process.<span class="property">env</span>.<span class="property">number</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 輸出結果為: 123</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="bodyparser"><a href="#bodyparser" class="headerlink" title="bodyparser"></a>bodyparser</h3><h4 id="為何要安裝"><a href="#為何要安裝" class="headerlink" title="為何要安裝"></a>為何要安裝</h4><p>body-parser是非常常用的一個express中介層(middleware)，<br>作用是對post請求的請求體進行解析。</p>
+<h4 id="body-parser主要做了什麼"><a href="#body-parser主要做了什麼" class="headerlink" title="body-parser主要做了什麼"></a>body-parser主要做了什麼</h4><p>處理不同類型的請求體：例如text、json、urlencoded等，對應的封包主體的格式不同。<br>處理不同的編碼：例如utf8、gbk等。<br>處理不同的壓縮類型：比如gzip、deflare等。<br>其他邊界、異常的處理。</p>
+<h4 id="安裝-2"><a href="#安裝-2" class="headerlink" title="安裝"></a>安裝</h4><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install body-parser</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h4 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h4><p>使用非常簡單，以下兩行程式碼已經涵蓋了大部分的使用場景。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">&#x27;body-parser&#x27;</span>)</span><br><span class="line">app.<span class="title function_">use</span>(bodyParser.<span class="title function_">json</span>());</span><br><span class="line">app.<span class="title function_">use</span>(bodyParser.<span class="title function_">urlencoded</span>(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a class="link"   href="https://expressjs.com/zh-tw/" >express <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://andy6804tw.github.io/2017/12/24/nodemon-tutorial/" >nodemon <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://www.npmjs.com/package/dotenv" >dotenv <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br><a class="link"   href="https://www.cnblogs.com/chyingp/p/nodejs-learning-express-body-parser.html" >body-parser <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>安裝NVM教學</title>
+    <url>/2023/06/05/node/nvm%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>在工作中常常會需要去接手他人的程式碼，每個專案所使用的開發環境不一定相同，用的node.js版本就有很多不同的版本，<br>這個時候就可以使用<code>NVM</code>來輕鬆切換不同版本的node.js，來解決不同版本所產生的問題。</p>
+<p><code>NVM</code> 為 <code>Node Version Manager</code> 的縮寫 ， 意思就是 <code>Node.js的版本管理器</code></p>
+<p>常使用到的功能 : </p>
+<ul>
+<li>切換node.js版本</li>
+<li>安裝不同版本的node.js作為環境</li>
+</ul>
+<h2 id="下載教學"><a href="#下載教學" class="headerlink" title="下載教學"></a>下載教學</h2><ul>
+<li>Windows<br>Windows 有提供安裝工具，下載後照著安裝精靈依序完成即可運作，<a class="link"   href="https://github.com/coreybutler/nvm-windows" >下載連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/L5YqZZ0.png"
+                     
+                ></p>
+<p>點擊 Download Now!</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/PM9CM6m.png"
+                     
+                ></p>
+<p>下載當前最新版本，並直接執行安裝</p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><h3 id="檢查-版本"><a href="#檢查-版本" class="headerlink" title="檢查 版本"></a>檢查 版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm -v </span><br></pre></td></tr></table></figure></div>
+
+<h3 id="安裝-最新版本"><a href="#安裝-最新版本" class="headerlink" title="安裝 最新版本"></a>安裝 最新版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install latest</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="安裝-LTS-版本"><a href="#安裝-LTS-版本" class="headerlink" title="安裝 LTS 版本"></a>安裝 LTS 版本</h3><p>lts 為長期支持版本，版本bug較少</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install lts</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="檢查-近期可用版本"><a href="#檢查-近期可用版本" class="headerlink" title="檢查 近期可用版本"></a>檢查 近期可用版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="安裝-特定版本"><a href="#安裝-特定版本" class="headerlink" title="安裝 特定版本"></a>安裝 特定版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm install &#123;版本號&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="檢視-已安裝版本"><a href="#檢視-已安裝版本" class="headerlink" title="檢視 已安裝版本"></a>檢視 已安裝版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="切換-版本"><a href="#切換-版本" class="headerlink" title="切換 版本"></a>切換 版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm use latest (最新版本)</span><br><span class="line"></span><br><span class="line">nvm use lts (長期支持版本)</span><br><span class="line"></span><br><span class="line">nvm use &#123;已安裝版本號&#125; (使用已安裝的版本)</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="移除-已安裝版本"><a href="#移除-已安裝版本" class="headerlink" title="移除 已安裝版本"></a>移除 已安裝版本</h3><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">nvm uninstall &#123;已安裝版本號&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="備註-環境變數不見"><a href="#備註-環境變數不見" class="headerlink" title="[備註] 環境變數不見"></a>[備註] 環境變數不見</h3><p><a class="link"   href="https://israynotarray.com/nodejs/20190801/449913843/" >參考網址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </p>
+<p>開啟環境變數 快捷鍵 win + pause (pageUp 上面那顆)</p>
+<p>通常預設</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\&#123;電腦使用者&#125;\AppData\Roaming\npm</span><br></pre></td></tr></table></figure></div>
+
+
+<h5 id="可查詢版本"><a href="#可查詢版本" class="headerlink" title="可查詢版本"></a>可查詢版本</h5><p><a class="link"   href="https://nodejs.org/en/blog/release/" >查詢網址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
-        <category>vscode</category>
+        <category>Node</category>
       </categories>
       <tags>
-        <tag>vscode</tag>
+        <tag>NodeJs</tag>
       </tags>
   </entry>
   <entry>
@@ -663,6 +505,237 @@
 <p>每一次重新啟動 ngrok，都會產生一個新的 Forwarding，</p>
 <p>除非你有付費的 ngrok 帳號，否則你每次都要重新啟動 ngrok，才能取得新的</p>
 <p>如果要停止 ngrok ， 只要按下 <code>Ctrl + C</code></p>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>typescript 找不到模組 &#39;./App.vue&#39; 或其對應的型別宣告。</title>
+    <url>/2023/11/04/ts/typescript%E6%89%BE%E4%B8%8D%E5%88%B0%E6%A8%A1%E7%B5%84/</url>
+    <content><![CDATA[<h2 id="錯誤訊息"><a href="#錯誤訊息" class="headerlink" title="錯誤訊息"></a>錯誤訊息</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/wGrMi0x.png"
+                     
+                ></p>
+<p>報錯原因：typescript 只能理解 .ts 檔案，無法理解 .vue檔案</p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>在專案根目錄專案 或是 <code>src</code> 資料夾底下建立一個，不為<code>main</code>，字尾為<code>.d.ts</code>的檔案</p>
+<p>然後加入此段程式碼</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">declare <span class="variable language_">module</span> <span class="string">&#x27;*.vue&#x27;</span> &#123;</span><br><span class="line">  <span class="keyword">import</span> &#123; <span class="title class_">ComponentOptions</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">  <span class="keyword">const</span> <span class="attr">componentOptions</span>: <span class="title class_">ComponentOptions</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> componentOptions</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/jJotjgG.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>typescript</category>
+      </categories>
+      <tags>
+        <tag>typescript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vite 專案項目中 使用 @ 代替 src</title>
+    <url>/2023/11/04/vite/vite%E5%B0%88%E6%A1%88%E9%A0%85%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8@%E4%BB%A3%E6%9B%BFsrc/</url>
+    <content><![CDATA[<h2 id="tpyescript"><a href="#tpyescript" class="headerlink" title="tpyescript"></a>tpyescript</h2><p>安裝 <code>@types/node</code></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn add @types/node</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; defineConfig &#125; from &#x27;vite&#x27;</span><br><span class="line">import path from &#x27;path&#x27;;</span><br><span class="line"></span><br><span class="line">export default defineConfig(&#123;</span><br><span class="line">  ...</span><br><span class="line">  </span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      &#x27;@&#x27;: path.resolve(__dirname, &#x27;src&#x27;),</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  ...</span><br><span class="line">  </span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>在 <code>tsconfig.json</code> 中設置</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;compilerOptions&quot;: &#123;</span><br><span class="line">    &quot;paths&quot;: &#123;</span><br><span class="line">      &quot;@/*&quot;: [</span><br><span class="line">        &quot;./src/*&quot;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
+      <categories>
+        <category>vite</category>
+      </categories>
+      <tags>
+        <tag>typescript</tag>
+        <tag>vite</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode設定Markdown觸發使用者程式碼片段</title>
+    <url>/2023/08/05/vscode/vscode%E8%A8%AD%E5%AE%9AMarkdown%E8%A7%B8%E7%99%BC%E4%BD%BF%E7%94%A8%E8%80%85%E7%A8%8B%E5%BC%8F%E7%A2%BC%E7%89%87%E6%AE%B5/</url>
+    <content><![CDATA[<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>在用markdown寫blog的時候，文章都要先寫一些 <code>title</code>、<code>tags</code>、<code>categories</code> 等…<br><br><br>建置的時候才能夠順利分類，每一次都要手動打字也太累<br><br><br>於是想到vscode裡面有 使用者程式碼片段功能，可以幫助我們 快速建立好範本</p>
+<h3 id="開始建立-個人專屬的-使用者程式碼片段"><a href="#開始建立-個人專屬的-使用者程式碼片段" class="headerlink" title="開始建立 個人專屬的 使用者程式碼片段"></a>開始建立 個人專屬的 使用者程式碼片段</h3><ol>
+<li>點選 vscode 左下角齒輪</li>
+<li>選擇使用者程式碼片段</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/02OLlo1.png"
+                     
+                ></p>
+<ol start="3">
+<li>在搜尋欄位中，選擇 <code>新增全域程式碼片段檔案</code></li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/dzK3w3o.png"
+                     
+                ></p>
+<ol start="4">
+<li>建立名稱</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/mXn7UnU.png"
+                     
+                ></p>
+<ol start="5">
+<li>之後會開啟一個檔案，裡面會有預設的註解</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/TBLIGCV.png"
+                     
+                ></p>
+<ol start="6">
+<li>以下是自己寫markDown 常使用到的 程式碼片段</li>
+</ol>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Print to JavaScript code area&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!js&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;```javascript&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$1&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;```&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;js區塊&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;Print to css code area&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!css&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;```css&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$1&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;```&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;css區塊&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;Print to html code area&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!html&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;```html&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$1&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;$2&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;```&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;html區塊&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;print to blog template&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;!blog&quot;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;body&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">			<span class="string">&quot;---&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;title: 設定標題&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;tags: &quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;  - 設定標籤&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;categories: 設定歸檔&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;date: 建立日期&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;update: 最後更新日期&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="string">&quot;---&quot;</span></span><br><span class="line">		<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;hexo blog 文章建立預設項目&quot;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+
+<ol start="7">
+<li>建立完成自己的程式碼片段後，需要到vscode 設定去做對應的設定</li>
+</ol>
+<ul>
+<li>開啟 Command Palette (Ctrl+Shift+P)</li>
+<li>Configure language specific settings</li>
+<li>選擇markdown</li>
+<li>點選右上角，開啟設定(json)</li>
+<li>將下方這段json貼上  ↓  <div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;[markdown]&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;editor.quickSuggestions&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;other&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;comments&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;strings&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<p>這樣設定就完成了，就可以在markdown使用自己設定好的程式碼片段了 </p>
+]]></content>
+      <categories>
+        <category>vscode</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown Marp VSCode 套件使用教學</title>
+    <url>/2023/10/11/tools/marp/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>常常要開會議報告，需要講稿的時候，都還要特別去做PPT或是PDF，對於一個工程師來說，這是一種折磨</p>
+<p>可以用順手的工具去做投影片就可以輕鬆很多，也可以省去很多精力</p>
+<p>於是就找到了 <code>Marp</code> 這個功能套件</p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p><code>Marp</code> 是一個基於 Markdown 語法的投影片製作工具。</p>
+<p>可以使用 Markdown 語法 快速建立 報告用的投影片</p>
+<h2 id="什麼是Markdown"><a href="#什麼是Markdown" class="headerlink" title="什麼是Markdown"></a>什麼是Markdown</h2><blockquote>
+<p>Markdown是一種輕量級標記式語言，它允許人們使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。</p>
+</blockquote>
+<p><a class="link"   href="https://zh.wikipedia.org/zh-tw/Markdown" >來源 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>有 VsCode 專用套件和 獨立的 CLI 可以做選擇</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gyYEoAn.jpg"
+                     
+                ></p>
+<p><code>本次以 VsCode 套件為主</code></p>
+<p>安裝 Marp 非常簡單<br>只要在 VsCode 中安裝<a class="link"   href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >Marp for VS Code <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的 Plugin 即可。</p>
+<h1 id="基本設定"><a href="#基本設定" class="headerlink" title="基本設定"></a>基本設定</h1><p>要在 VsCode 使用 Marp ，<br>首先我們要在文件最上方加入以下內容：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">--- </span><br><span class="line">marp: true </span><br><span class="line">theme: gaia</span><br><span class="line">paginate: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+
+<p>告訴Vscode 我們開始使用 marp的套件了</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">marp : <span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
+
+<p>theme 是指簡報主題的意思，<br>Marp 預設提供了 3 種簡報主題：<br><br></p>
+<ul>
+<li>Default 預設主題</li>
+<li>uncover 主題具有三個設計理念：簡約、簡約、現代</li>
+<li>Gaia 主題基於<a class="link"   href="https://github.com/yhatt/marp" >yhatt&#x2F;marp <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的經典設計</li>
+</ul>
+<br>
+
+<p>每種主題在背景顏色，<br>Markdown文字的擺放位置都會有差異</p>
+<p><a class="link"   href="https://github.com/marp-team/marp-core/tree/main/themes?source=post_page-----eab8a0668733--------------------------------#readme" >參考說明 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>paginate 為 顯示頁數的選項</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line">paginate:<span class="type">boolean</span></span><br></pre></td></tr></table></figure></div>
+
+
+<h2 id="基本語法"><a href="#基本語法" class="headerlink" title="基本語法"></a>基本語法</h2><h3 id="1-分頁"><a href="#1-分頁" class="headerlink" title="1. 分頁"></a>1. 分頁</h3><p>可使用 <code>---</code> 標記來分隔不同頁面的 Slide</p>
+<div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Page 1</span></span><br><span class="line">Hello World!</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># Page 2</span></span><br><span class="line">Hello World 2!</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-設定圖片寬度"><a href="#2-設定圖片寬度" class="headerlink" title="2. 設定圖片寬度"></a>2. 設定圖片寬度</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">width:200px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片寬度為 200px --&gt;</span><br><span class="line">![<span class="string">height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片高度為 300px --&gt;</span><br><span class="line">![<span class="string">width:200px height:300px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 同時設定兩者屬性 --&gt;</span><br><span class="line">![<span class="string">w:32 h:32</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 32x32 px --&gt;</span><br><span class="line">![<span class="string">width:90% height:80%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 設定圖片大小為 90% 寬度 x 80% 高度  --&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-設定圖片特效"><a href="#3-設定圖片特效" class="headerlink" title="3. 設定圖片特效"></a>3. 設定圖片特效</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">blur</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片 模糊化  --&gt;</span><br><span class="line">![<span class="string">blur:10px</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片模糊化，參數為 10px(越大越模糊)  --&gt;</span><br><span class="line">![<span class="string">grayscale:1</span>](<span class="link">image_path.jpg</span>) &lt;!-- 圖片灰階化  --&gt;</span><br><span class="line">![<span class="string">brightness:.8 sepia:50%</span>](<span class="link">image_path.jpg</span>) &lt;!-- 多重特效設定 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">### 4. 設定背景圖片</span></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">![bg](bg.jpg) &lt;!-- 設定 bg.jpg 為背景圖片--&gt;</span></span><br><span class="line"><span class="code">![bg fit](bg.jpg) &lt;!-- 設定 bg.jgp 的圖片大小調整為背景框架大小 --&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="4-1-控制背景圖位置"><a href="#4-1-控制背景圖位置" class="headerlink" title="4.1 控制背景圖位置"></a>4.1 控制背景圖位置</h3><div class="highlight-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">bg left</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側畫面 --&gt;</span><br><span class="line">![<span class="string">bg left:33%</span>](<span class="link">bg.jpg</span>) &lt;!-- 充滿左側 33% 畫面 --&gt;</span><br><span class="line">![<span class="string">bg right</span>](<span class="link">https://picsum.photos/720?image=29</span>) &lt;!-- 充滿右側畫面 --&gt;</span><br></pre></td></tr></table></figure></div>
+<p><code>bg left</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/jJXSHNV.png"
+                      alt="bg left"
+                ></p>
+<p><code>bg left:33%</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/uJ73gpD.png"
+                      alt="bg left:33%"
+                ></p>
+<p><code>bg right</code> 預覽</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MDRqycI.png"
+                      alt="bg right"
+                ></p>
+<h3 id="5-數學表示式"><a href="#5-數學表示式" class="headerlink" title="5. 數學表示式"></a>5. 數學表示式</h3><p>Marp 支援使用 Latex 語法來撰寫數學式，<br>只要使用 $…$ 或 $$…$$ 包含著 Latex 數學式<br>即可透過 Katex 或 MathJax 套件來顯示數學式。<br>現在我們在 Markdown 中輸入一下 Latex 表示式</p>
+<p>輸入 Latex 表示式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\sum_&#123;n=0&#125;^&#123;\infty&#125;=\frac&#123;f^&#123;(n)&#125;(a)&#125;&#123;n!&#125;(x-a)^n</span><br><span class="line">$$</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>顯示結果</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/i7W0FJ7.png"
+                     
+                ></p>
+<h2 id="匯出投影片"><a href="#匯出投影片" class="headerlink" title="匯出投影片"></a>匯出投影片</h2><p>只要選擇 右上角 兩個三角形圖案</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gcu5NZb.png"
+                     
+                ></p>
+<p>選擇 第一項</p>
+<p><code>export Slide Deck</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/bssChVz.png"
+                     
+                ></p>
+<p>就可以順利匯出pdf檔案了</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p><code>marp</code> 很方便於常常寫 markDown 文件的人來做使用，<br>可以將已經寫好的文件直接轉換成投影片，<br>可以省去時間在那邊拉圖，排版等事情</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a class="link"   href="https://www.casper.tw/development/2019/11/23/ten-mins-learn-markdown/" >十分鐘快速掌握 Markdown <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://zh.wikipedia.org/zh-tw/Markdown" >Markdown 維基百科 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode" >VScode套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown" >官方文件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </li>
+<li><a class="link"   href="https://yfwu.dev/tools/2021/12/13/marp.html" >Marp 使用細節 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://medium.com/pm%E7%9A%84%E7%94%9F%E7%94%A2%E5%8A%9B%E5%B7%A5%E5%85%B7%E7%AE%B1/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90%E7%B0%A1%E5%A0%B1%E6%8E%92%E7%89%88-%E5%B0%87%E7%B2%BE%E7%A5%9E%E5%B0%88%E6%B3%A8%E5%9C%A8%E6%BA%96%E5%82%99%E6%BC%94%E8%AC%9B%E4%B8%8A-eab8a0668733" >如何快速完成簡報排版，將精神專注在準備演講上？使用 Marp 套件轉換 Markdown 成簡報 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://jdev.tw/blog/5839/marp-markdown-presentation-writer" >使用Marp以Markdown快速製作簡報，並匯出HTML、PPTX與PDF <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://blog.yeshuanova.com/2021/06/marp_vscode/" >用 Markdown 撰寫 Slide - 使用 Marp 套件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
 ]]></content>
       <categories>
         <category>tools</category>
